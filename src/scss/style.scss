@@ -1,0 +1,67 @@
+@import "fonts";
+@import "vars";
+@import "settings";
+@import "common";
+
+@import "./components/header"
+
+.link:active {
+   opacity: 0.4;
+}
+
+.service-list__link :where(line, path) {
+   transition: transform 0.3s ease-in-out;
+}
+
+.service-list__link:hover line {
+   transform: scaleX(calc(26 / 18));
+}
+
+.service-list__link:hover path {
+   transform: translateX(8px);
+}
+
+.socials-list__item_vk {
+   --vk-icon: url("@img/icons/icons.svg#vk");
+
+   width: 28px;
+   height: 22px;
+   background: var(--vk-icon) center / cover no-repeat;
+   transition: background 0.3s ease-out;
+
+   &:hover {
+      --vk-icon: url("@img/icons/icons.svg#vk-clr");
+   }
+}
+
+.socials-box__academy {
+   display: flex;
+   gap: 22px;
+   align-items: center;
+   justify-content: start;
+
+   .socials-box__academy-img {
+      display: grid;
+      place-items: center;
+
+      img {
+         grid-area: 1/-1;
+         transition: opacity 0.3s ease-out;
+      }
+
+      span {
+         grid-area: 1/-1;
+         width: 27px;
+         height: 34px;
+         background: url("@img/icons/icons.svg#html-academy") center / cover no-repeat;
+      }
+   }
+
+   &:hover .socials-box__academy-img img {
+      opacity: 0;
+   }
+
+   &:active {
+      opacity: 0.3;
+   }
+}

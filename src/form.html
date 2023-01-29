@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+@@include('html/head.html', {"title":"CAT ENERGY. Подбор программы питания"})
+
+<body class="page-body">
+
+   @@include('html/header.html', {"active":"", "active-catalog":"", "active-form":"main-nav__item_active"})
+
+   <main class="form-main">
+      <h1 class="visually-hidden">Подбор программы питания</h1>
+      <section class="programm-form">
+         <div class="programm-form__header wrapper">
+            <h2 class="page-title programm-form__title">Подбор программы</h2>
+            <p class="programm-form__descr">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+         </div>
+         <form class="page-form" action="https://echo.htmlacademy.ru" method="post">
+
+            <fieldset class="page-form__element pet wrapper">
+               <legend class="visually-hidden">данные вашего питомца</legend>
+               <label class="page-form__name">
+                  <span class="page-form__descr">имя:*</span>
+                  <input class="page-form__input page-input" type="text" name="pet-name" id="pet-name" required placeholder="барсик">
+               </label>
+               <label class="page-form__weight">
+                  <span class="page-form__descr">вес (кг):*</span>
+                  <input class="page-form__input page-input" type="number" step="0.1" name="pet-weight" id="pet-weight" required placeholder="7">
+               </label>
+               <label class="page-form__age">
+                  <span class="page-form__descr">возраст (лет):*</span>
+                  <input class="page-form__input page-input" type="number" step="0.1" name="pet-age" id="pet-age" placeholder="7">
+               </label>
+            </fieldset>
+
+            <fieldset class="page-form__element programm-type wrapper">
+               <legend class="visually-hidden">выбор программы питания</legend>
+               <label class="page-form__weight-loss">
+                  <input class="visually-hidden" type="radio" name="feed-programm" id="weight-loss" value="weight-loss" checked>
+                  <span class="page-form__descr">похудение</span>
+               </label>
+               <label class="page-form__weight-gain">
+                  <input class="visually-hidden" type="radio" name="feed-programm" id="weight-gain" value="weight-gain">
+                  <span class="page-form__descr">набор массы</span>
+               </label>
+               <label class="page-form__weight-consultation">
+                  <input class="visually-hidden" type="radio" name="feed-programm" id="weight-consultation" value="weight-consultation">
+                  <span class="page-form__descr">не знаю (Нужен ваш совет)</span>
+               </label>
+            </fieldset>
+
+            <fieldset class="page-form__element contacts element_top-line wrapper">
+               <legend class="page-form__legend">Контактные данные (владельца кота)</legend>
+               <label class="page-form__mail">
+                  <span class="page-form__descr">e-mail:*</span>
+                  <input class="page-form__input page-input" type="email" name="owner-mail" id="owner-mail" required placeholder="kuklachev@gmail.com">
+               </label>
+               <label class="page-form__tel">
+                  <span class="page-form__descr">телефон:*</span>
+                  <input class="page-form__input page-input" type="tel" name="owner-tel" id="owner-tel" required pattern="[0-9]{11}" placeholder="8 (960) 900-60-90" maxlength="11">
+               </label>
+            </fieldset>
+
+            <div class="page-form__element comment element_top-line">
+               <div class="wrapper">
+                  <label class="page-form__legend page-form__comment-subtitle" for="comment">Комментарий</label>
+                  <textarea class="page-form__comment-area" name="comment" id="comment" cols="30" rows="10" placeholder="расскажите обо всех повадках кота"></textarea>
+               </div>
+            </div>
+
+            <fieldset class="page-form__element additional element_top-line wrapper">
+               <legend class="page-form__legend">Дополнительно</legend>
+               <label class="page-form__sweetener">
+                  <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+                  <span class="page-form__descr">сахарозаменитель</span>
+               </label>
+               <label class="page-form__water">
+                  <input class="visually-hidden" type="checkbox" name="water" id="water">
+                  <span class="page-form__descr">питьевая вода</span>
+               </label>
+               <label class="page-form__milk">
+                  <input class="visually-hidden" type="checkbox" name="milk" id="milk">
+                  <span class="page-form__descr">молоко</span>
+               </label>
+               <label class="page-form__vitamins">
+                  <input class="visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+                  <span class="page-form__descr">витамины</span>
+               </label>
+            </fieldset>
+
+            <div class="page-form__btn-wrap ">
+               <button class="page-form__btn btn btn_green-box" type="submit">отправить заявку</button>
+               <span class="page-form__text-required">* — Обязательные поля</span>
+            </div>
+
+         </form>
+      </section>
+   </main>
+
+   @@include('html/footer.html')
+</body>
+
+</html>
