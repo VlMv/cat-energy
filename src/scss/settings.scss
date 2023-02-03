@@ -1,6 +1,7 @@
-html * {
+html :where(*) {
    box-sizing: border-box;
    margin: 0;
+   padding: 0;
 }
 
 *::before,
@@ -12,8 +13,7 @@ a {
    text-decoration: none;
 }
 
-img,
-picture {
+img {
    max-width: 100%;
    height: auto;
 }

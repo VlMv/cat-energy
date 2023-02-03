@@ -4,237 +4,238 @@
 @@include('html/head.html', {"title":"CAT ENERGY. Каталог"})
 
 <body class="page-body">
+   <div class="page-wrapper">
+      @@include('html/header.html', {"active":"", "active-catalog":"main-nav__item_active", "active-form":""})
 
-   @@include('html/header.html', {"active":"", "active-catalog":"main-nav__item_active", "active-form":""})
+      <main class="catalog-main">
+         <h1 class="page-title catalog-main__title">Каталог продукции</h1>
+         <section class="food-catalog wrapper">
+            <h2 class="visually-hidden">каталог кормов для котов</h2>
+            <ul class="food-catalog__list food-list list-reset">
 
-   <main class="catalog-main">
-      <h1 class="page-title catalog-main__title">Каталог продукции</h1>
-      <section class="food-catalog wrapper">
-         <h2 class="visually-hidden">каталог кормов для котов</h2>
-         <ul class="food-catalog__list food-list list-reset">
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <div class="product-card__info">
-                     <h3 class="product-card__title"><a class="link" href="#" aria-label="Куриный корм Cat Energy PRO 500 грамм"><span aria-hidden="true">Cat Energy PRO 500 г</span></a></h3>
-                     <dl class="product-card__data dl-reset">
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Масса</dt>
-                           <dd class="product-card__value">500 г</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Вкус</dt>
-                           <dd class="product-card__value">Курица</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Цена</dt>
-                           <dd class="product-card__value">700 Р.</dd>
-                        </div>
-                     </dl>
-                  </div>
-                  <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-chicken-500.png" alt="Упаковка куриного кошачего корма Cat energy"></a>
-                  <a class="product-card__link link link_green-box" href="#">заказать</a>
-               </article>
-            </li>
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <div class="product-card__info">
-                     <h3 class="product-card__title"><a class="link" href="#" aria-label="Куриный корм Cat Energy PRO 1000 грамм"><span aria-hidden="true">Cat Energy PRO 1000 г</span></a></h3>
-                     <dl class="product-card__data dl-reset">
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Масса</dt>
-                           <dd class="product-card__value">1000 г</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Вкус</dt>
-                           <dd class="product-card__value">Курица</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Цена</dt>
-                           <dd class="product-card__value">1000 Р.</dd>
-                        </div>
-                     </dl>
-                  </div>
-                  <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-chicken-1000.png" alt="Большая упаковка куриного кошачего корма Cat energy"></a>
-                  <a class="product-card__link link link_green-box" href="#">заказать</a>
-               </article>
-            </li>
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <div class="product-card__info">
-                     <h3 class="product-card__title"><a class="link" href="#" aria-label="Корм из рыбы Cat Energy PRO 500 грамм"><span aria-hidden="true">Cat Energy PRO 500 г</span></a></h3>
-                     <dl class="product-card__data dl-reset">
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Масса</dt>
-                           <dd class="product-card__value">500 г</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Вкус</dt>
-                           <dd class="product-card__value">Рыба</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Цена</dt>
-                           <dd class="product-card__value">700 Р.</dd>
-                        </div>
-                     </dl>
-                  </div>
-                  <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-fish-500.png" alt="Упаковка кошачего корма из рыбы Cat energy"></a>
-                  <a class="product-card__link link link_green-box" href="#">заказать</a>
-               </article>
-            </li>
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <div class="product-card__info">
-                     <h3 class="product-card__title"><a class="link" href="#" aria-label="Корм из рыбы Cat Energy PRO 1000 грамм"><span aria-hidden="true">Cat Energy PRO 1000 г</span></a></h3>
-                     <dl class="product-card__data dl-reset">
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Масса</dt>
-                           <dd class="product-card__value">1000 г</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Вкус</dt>
-                           <dd class="product-card__value">Рыба</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Цена</dt>
-                           <dd class="product-card__value">1000 Р.</dd>
-                        </div>
-                     </dl>
-                  </div>
-                  <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-fish-1000.png" alt="Большая упаковка кошачего корма из рыбы Cat energy"></a>
-                  <a class="product-card__link link link_green-box" href="#">заказать</a>
-               </article>
-            </li>
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <div class="product-card__info">
-                     <h3 class="product-card__title"><a class="link" href="#" aria-label="Гречневый корм Cat Energy slim 500 грамм"><span aria-hidden="true">Cat Energy slim 500 г</span></a></h3>
-                     <dl class="product-card__data dl-reset">
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Масса</dt>
-                           <dd class="product-card__value">500 г</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Вкус</dt>
-                           <dd class="product-card__value">Гречка</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Цена</dt>
-                           <dd class="product-card__value">400 Р.</dd>
-                        </div>
-                     </dl>
-                  </div>
-                  <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/slim-buckwheat-500.png" alt="Упаковка гречневого кошачего корма Cat energy"></a>
-                  <a class="product-card__link link link_green-box" href="#">заказать</a>
-               </article>
-            </li>
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <div class="product-card__info">
-                     <h3 class="product-card__title"><a class="link" href="#" aria-label="Гречневый корм Cat Energy slim 1000 грамм"><span aria-hidden="true">Cat Energy slim 1000 г</span></a></h3>
-                     <dl class="product-card__data dl-reset">
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Масса</dt>
-                           <dd class="product-card__value">1000 г</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Вкус</dt>
-                           <dd class="product-card__value">Гречка</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Цена</dt>
-                           <dd class="product-card__value">700 Р.</dd>
-                        </div>
-                     </dl>
-                  </div>
-                  <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/slim-buckwheat-1000.png" alt="Большая упаковка гречневого кошачего корма Cat energy"></a>
-                  <a class="product-card__link link link_green-box" href="#">заказать</a>
-               </article>
-            </li>
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <div class="product-card__info">
-                     <h3 class="product-card__title"><a class="link" href="#" aria-label="Рисовый корм Cat Energy PRO 500 грамм"><span aria-hidden="true">Cat Energy slim 500 г</span></a></h3>
-                     <dl class="product-card__data dl-reset">
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Масса</dt>
-                           <dd class="product-card__value">500 г</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Вкус</dt>
-                           <dd class="product-card__value">Рис</dd>
-                        </div>
-                        <div class="product-card__data-row product-card__text">
-                           <dt>Цена</dt>
-                           <dd class="product-card__value">500 Р.</dd>
-                        </div>
-                     </dl>
-                  </div>
-                  <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/slim-rice-500.png" alt="Упаковка рисового кошачего корма Cat energy"></a>
-                  <a class="product-card__link link link_green-box" href="#">заказать</a>
-               </article>
-            </li>
-
-            <li class="food-list__item">
-               <article class="product-card">
-                  <h3 class="product-card__title">Показать еще 100500 товаров</h3>
-                  <p class="product-card__text">На самом деле вкусов гораздо больше!</p>
-                  <a class="product-card__link link link_grey-box" href="#">показать все</a>
-               </article>
-            </li>
-
-         </ul>
-      </section>
-      <section class="catalog-extra element_top-line wrapper">
-         <h2 class="catalog-extra__title">Дополнительные товары</h2>
-
-         <div class="catalog-extra__container">
-            <ul class="catalog-extra__list extra-list list-reset">
-               <li class="extra-list__item">
-                  <h3 class="extra-list__title">cахарозаменитель</h3>
-                  <dl class="extra-list__data dl-reset">
-                     <dt>1 упаковка (100 г)</dt>
-                     <dd class="extra-list__value">200 Р.</dd>
-                  </dl>
-                  <a href="#" class="link extra-list__link link_green-box">заказать</a>
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <div class="product-card__info">
+                        <h3 class="product-card__title"><a class="link" href="#" aria-label="Куриный корм Cat Energy PRO 500 грамм"><span aria-hidden="true">Cat Energy PRO 500 г</span></a></h3>
+                        <dl class="product-card__data dl-reset">
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Масса</dt>
+                              <dd class="product-card__value">500 г</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Вкус</dt>
+                              <dd class="product-card__value">Курица</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Цена</dt>
+                              <dd class="product-card__value">700 Р.</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-chicken-500.png" alt="Упаковка куриного кошачего корма Cat energy"></a>
+                     <a class="product-card__link link link_green-box" href="#">заказать</a>
+                  </article>
                </li>
-               <li class="extra-list__item">
-                  <h3 class="extra-list__title">питьевая вода</h3>
-                  <dl class="extra-list__data dl-reset">
-                     <dt>5 литров</dt>
-                     <dd class="extra-list__value">50 Р.</dd>
-                  </dl>
-                  <a href="#" class="link extra-list__link link_green-box">заказать</a>
+
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <div class="product-card__info">
+                        <h3 class="product-card__title"><a class="link" href="#" aria-label="Куриный корм Cat Energy PRO 1000 грамм"><span aria-hidden="true">Cat Energy PRO 1000 г</span></a></h3>
+                        <dl class="product-card__data dl-reset">
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Масса</dt>
+                              <dd class="product-card__value">1000 г</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Вкус</dt>
+                              <dd class="product-card__value">Курица</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Цена</dt>
+                              <dd class="product-card__value">1000 Р.</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-chicken-1000.png" alt="Большая упаковка куриного кошачего корма Cat energy"></a>
+                     <a class="product-card__link link link_green-box" href="#">заказать</a>
+                  </article>
                </li>
-               <li class="extra-list__item">
-                  <h3 class="extra-list__title">молоко</h3>
-                  <dl class="extra-list__data dl-reset">
-                     <dt>1 литр</dt>
-                     <dd class="extra-list__value">100 Р.</dd>
-                  </dl>
-                  <a href="#" class="link extra-list__link link_green-box">заказать</a>
+
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <div class="product-card__info">
+                        <h3 class="product-card__title"><a class="link" href="#" aria-label="Корм из рыбы Cat Energy PRO 500 грамм"><span aria-hidden="true">Cat Energy PRO 500 г</span></a></h3>
+                        <dl class="product-card__data dl-reset">
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Масса</dt>
+                              <dd class="product-card__value">500 г</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Вкус</dt>
+                              <dd class="product-card__value">Рыба</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Цена</dt>
+                              <dd class="product-card__value">700 Р.</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-fish-500.png" alt="Упаковка кошачего корма из рыбы Cat energy"></a>
+                     <a class="product-card__link link link_green-box" href="#">заказать</a>
+                  </article>
                </li>
-               <li class="extra-list__item">
-                  <h3 class="extra-list__title">витамины</h3>
-                  <dl class="extra-list__data dl-reset">
-                     <dt>1 упаковка (30 г)</dt>
-                     <dd class="extra-list__value">300 Р.</dd>
-                  </dl>
-                  <a href="#" class="link extra-list__link link_green-box">заказать</a>
+
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <div class="product-card__info">
+                        <h3 class="product-card__title"><a class="link" href="#" aria-label="Корм из рыбы Cat Energy PRO 1000 грамм"><span aria-hidden="true">Cat Energy PRO 1000 г</span></a></h3>
+                        <dl class="product-card__data dl-reset">
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Масса</dt>
+                              <dd class="product-card__value">1000 г</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Вкус</dt>
+                              <dd class="product-card__value">Рыба</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Цена</dt>
+                              <dd class="product-card__value">1000 Р.</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/pro-fish-1000.png" alt="Большая упаковка кошачего корма из рыбы Cat energy"></a>
+                     <a class="product-card__link link link_green-box" href="#">заказать</a>
+                  </article>
                </li>
+
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <div class="product-card__info">
+                        <h3 class="product-card__title"><a class="link" href="#" aria-label="Гречневый корм Cat Energy slim 500 грамм"><span aria-hidden="true">Cat Energy slim 500 г</span></a></h3>
+                        <dl class="product-card__data dl-reset">
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Масса</dt>
+                              <dd class="product-card__value">500 г</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Вкус</dt>
+                              <dd class="product-card__value">Гречка</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Цена</dt>
+                              <dd class="product-card__value">400 Р.</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/slim-buckwheat-500.png" alt="Упаковка гречневого кошачего корма Cat energy"></a>
+                     <a class="product-card__link link link_green-box" href="#">заказать</a>
+                  </article>
+               </li>
+
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <div class="product-card__info">
+                        <h3 class="product-card__title"><a class="link" href="#" aria-label="Гречневый корм Cat Energy slim 1000 грамм"><span aria-hidden="true">Cat Energy slim 1000 г</span></a></h3>
+                        <dl class="product-card__data dl-reset">
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Масса</dt>
+                              <dd class="product-card__value">1000 г</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Вкус</dt>
+                              <dd class="product-card__value">Гречка</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Цена</dt>
+                              <dd class="product-card__value">700 Р.</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/slim-buckwheat-1000.png" alt="Большая упаковка гречневого кошачего корма Cat energy"></a>
+                     <a class="product-card__link link link_green-box" href="#">заказать</a>
+                  </article>
+               </li>
+
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <div class="product-card__info">
+                        <h3 class="product-card__title"><a class="link" href="#" aria-label="Рисовый корм Cat Energy PRO 500 грамм"><span aria-hidden="true">Cat Energy slim 500 г</span></a></h3>
+                        <dl class="product-card__data dl-reset">
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Масса</dt>
+                              <dd class="product-card__value">500 г</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Вкус</dt>
+                              <dd class="product-card__value">Рис</dd>
+                           </div>
+                           <div class="product-card__data-row product-card__text">
+                              <dt>Цена</dt>
+                              <dd class="product-card__value">500 Р.</dd>
+                           </div>
+                        </dl>
+                     </div>
+                     <a class="product-card__food-link" href="#"><img class="product-card__img" src="img/goods/slim-rice-500.png" alt="Упаковка рисового кошачего корма Cat energy"></a>
+                     <a class="product-card__link link link_green-box" href="#">заказать</a>
+                  </article>
+               </li>
+
+               <li class="food-list__item">
+                  <article class="product-card">
+                     <h3 class="product-card__title">Показать еще 100500 товаров</h3>
+                     <p class="product-card__text">На самом деле вкусов гораздо больше!</p>
+                     <a class="product-card__link link link_grey-box" href="#">показать все</a>
+                  </article>
+               </li>
+
             </ul>
-            <p class="catalog-extra__gift">Закажите все и получите чехол для кота в подарок!</p>
-         </div>
-      </section>
-   </main>
+         </section>
+         <section class="catalog-extra element_top-line wrapper">
+            <h2 class="catalog-extra__title">Дополнительные товары</h2>
 
-   @@include('html/footer.html')
+            <div class="catalog-extra__container">
+               <ul class="catalog-extra__list extra-list list-reset">
+                  <li class="extra-list__item">
+                     <h3 class="extra-list__title">cахарозаменитель</h3>
+                     <dl class="extra-list__data dl-reset">
+                        <dt>1 упаковка (100 г)</dt>
+                        <dd class="extra-list__value">200 Р.</dd>
+                     </dl>
+                     <a href="#" class="link extra-list__link link_green-box">заказать</a>
+                  </li>
+                  <li class="extra-list__item">
+                     <h3 class="extra-list__title">питьевая вода</h3>
+                     <dl class="extra-list__data dl-reset">
+                        <dt>5 литров</dt>
+                        <dd class="extra-list__value">50 Р.</dd>
+                     </dl>
+                     <a href="#" class="link extra-list__link link_green-box">заказать</a>
+                  </li>
+                  <li class="extra-list__item">
+                     <h3 class="extra-list__title">молоко</h3>
+                     <dl class="extra-list__data dl-reset">
+                        <dt>1 литр</dt>
+                        <dd class="extra-list__value">100 Р.</dd>
+                     </dl>
+                     <a href="#" class="link extra-list__link link_green-box">заказать</a>
+                  </li>
+                  <li class="extra-list__item">
+                     <h3 class="extra-list__title">витамины</h3>
+                     <dl class="extra-list__data dl-reset">
+                        <dt>1 упаковка (30 г)</dt>
+                        <dd class="extra-list__value">300 Р.</dd>
+                     </dl>
+                     <a href="#" class="link extra-list__link link_green-box">заказать</a>
+                  </li>
+               </ul>
+               <p class="catalog-extra__gift">Закажите все и получите чехол для кота в подарок!</p>
+            </div>
+         </section>
+      </main>
+
+      @@include('html/footer.html')
+   </div>
 </body>
 
 </html>

@@ -12,7 +12,9 @@
          {
             "baseIndentLevel": 1
          }
-      ]
+      ],
+      "custom-property-pattern": "^([a-z][a-z0-9]*)|(_[a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+      "max-line-length": 200
    },
    "plugins": [
       "stylelint-order",
