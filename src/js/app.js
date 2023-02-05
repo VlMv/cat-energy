@@ -7,7 +7,7 @@ burger = burger.addEventListener('click', function () {
       burger.style.setProperty("--_scale", "1");
       burgerBar.style.setProperty("--_shrink", "0");
       burger.setAttribute("aria-expanded", "true");
-      nav.style.setProperty("--_top-offset", "71px");
+      nav.style.setProperty("--_expand", "1");
       nav.setAttribute("aria-hidden", "false");
 
    } else {

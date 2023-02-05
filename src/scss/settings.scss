@@ -13,9 +13,14 @@ a {
    text-decoration: none;
 }
 
-img {
+img,
+picture {
    max-width: 100%;
    height: auto;
+}
+
+picture > img {
+   margin-inline: auto;
 }
 
 input,

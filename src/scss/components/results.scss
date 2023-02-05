@@ -1,0 +1,55 @@
+.results {
+   padding-top: 27px;
+   background-color: var(--clr-basic-medium-grey);
+
+   &__wrap {}
+
+   &__inner {}
+
+   &__title {
+      margin-bottom: 33px;
+   }
+
+   &__text {
+      margin-bottom: 25px;
+   }
+
+   &__desc-list {}
+
+   &__comparison {}
+
+   &__picture {}
+
+   &__range-control {}
+
+   &__range-slider {}
+}
+
+.wrap {}
+
+.data-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: start;
+
+   &__element {
+      display: flex;
+      border: 1px solid var(--clr-border-medium-grey);
+
+      &_borderless {
+         border: none;
+      }
+   }
+
+   &__num {
+      &_text-small {}
+   }
+
+   &__descr {
+      &_reverse {
+         order: -1;
+      }
+
+      &_text-big {}
+   }
+}

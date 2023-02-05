@@ -19,19 +19,30 @@
 .link {
    display: block;
    color: currentcolor;
+   font-family: var(--font-oswald);
    text-align: center;
    text-transform: uppercase;
 
    &_green-box {
-      padding: 10px 26px;
+      padding: 11px 26px;
       color: var(--clr-white);
       font-size: 14px;
       font-family: var(--font-oswald);
       line-height: 18px;
       background-color: var(--clr-basic-green);
 
+      @include hover {
+         &:hover {
+            background-color: var(--clr-dark-green);
+         }
+      }
+
       &:active {
-         color: var(--opacity-action); // active opacity on text, span everywhere?
+         background-color: var(--clr-dark-green);
+      }
+
+      &:active span {
+         opacity: var(--opacity-action);
       }
    }
 }
@@ -44,7 +55,33 @@
    line-height: 36px;
 
    &_white {
-      // color: var(--clr-white);
+      color: var(--clr-white);
       text-align: center;
    }
+}
+
+.subtitle {
+   color: var(--clr-black);
+   font-weight: 400;
+   font-size: 24px;
+   font-family: var(--font-oswald);
+   line-height: 37px;
+   text-transform: uppercase;
+}
+
+.text {
+   color: var(--clr-text-medium-grey);
+   font-weight: 400;
+   font-size: 14px;
+   font-family: Arial, sans-serif;
+   font-style: normal;
+   line-height: 18px;
+}
+
+.title {
+   color: var(--clr-black);
+   font-weight: 400;
+   font-size: 36px;
+   font-family: var(--font-oswald);
+   line-height: 40px;
 }

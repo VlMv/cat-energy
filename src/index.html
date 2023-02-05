@@ -12,23 +12,24 @@
       <main class="index-main">
          <h1 class="visually-hidden">сервис функционального питания для котов</h1>
 
-         <section class="hero index-main__hero">
-            <div class="pad-wrapper">
-               <h2 class="page-title page-title_white hero__title">Функциональное
-                  питание для котов</h2>
-               <p class="hero__slogan">Занялся собой? Займись котом!</p>
-               <img class="hero__img" src="@img/product-hero.png" alt="корм cat energy в стакане-упаковке, вкус курица" width="550" height="500">
-               <a class="link link_green-box hero__link" href="form.html">подобрать программу</a>
-            </div>
+         <section class="hero pad-wrapper">
+            <h2 class="page-title page-title_white hero__title">Функциональное
+               питание для котов</h2>
+            <p class="hero__slogan">Занялся собой? Займись котом!</p>
+            <picture>
+               <source media="(min-width: 768px)" srcset="@img/product-hero.png" width="552" height="499">
+               <img class="hero__img" src="@img/product-hero-mobile.png" alt="корм cat energy в стакане-упаковке, вкус курица" width="280" height="270">
+            </picture>
+            <a class="link link_green-box hero__link" href="form.html"><span>подобрать программу</span></a>
          </section>
 
-         <section class="services wrapper">
+         <section class="services pad-wrapper">
             <h2 class="visually-hidden">наши услуги</h2>
             <ul class="service-list list-reset">
-               <li class="service-list__item">
-                  <h3 class="subtitle service-list__subtitle service-list__subtitle_slim">похудение</h3>
-                  <p class="text service-list__descr">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-                  <a class="link service-list__link" href="catalog.html">
+               <li class="service-list__item service-item">
+                  <h3 class="subtitle service-item__subtitle service-item__subtitle_slim">похудение</h3>
+                  <p class="text service-item__descr">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+                  <a class="link service-item__link" href="catalog.html">
                      <span>каталог slim</span>
                      <svg width="40" height="12" viewBox="0 0 40 12" xmlns="http://www.w3.org/2000/svg">
                         <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2" />
@@ -36,10 +37,10 @@
                      </svg>
                   </a>
                </li>
-               <li class="service-list__item">
-                  <h3 class="subtitle service-list__subtitle service-list__subtitle_muscle">набор массы</h3>
-                  <p class="text service-list__descr">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-                  <a class="link service-list__link" href="catalog.html">
+               <li class="service-list__item service-item">
+                  <h3 class="subtitle service-item__subtitle service-item__subtitle_muscle">набор массы</h3>
+                  <p class="text service-item__descr">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+                  <a class="link service-item__link" href="catalog.html">
                      <span>каталог pro</span>
                      <svg width="40" height="12" viewBox="0 0 40 12" xmlns="http://www.w3.org/2000/svg">
                         <line y1="6" x2="18" y2="6" stroke="black" stroke-width="2" />
@@ -50,12 +51,13 @@
             </ul>
          </section>
 
-         <section class="benefits wrapper">
+         <section class="benefits pad-wrapper">
             <h2 class="visually-hidden">преимущества нашего питания для котов</h2>
-            <p class="title benefits__title">как это работает</p>
+            <p class="title benefits__title">Как это работает</p>
             <ul class="benefits-list list-reset">
                <li class="benefits-list__item benefits-list__item_leaf">
-                  <p class="text">Функциональное питание содержит только полезные питательные вещества.</p>
+                  <p class="text">Функциональное питание содержит только полезные питательные вещества.
+                  </p>
                </li>
                <li class="benefits-list__item benefits-list__item_boiling">
                   <p class="text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
@@ -69,24 +71,24 @@
             </ul>
          </section>
 
-         <section class="results">
-            <div class="wrapper results__wrapper">
+         <section class="results pad-wrapper">
+            <div class="wrap results__wrap">
                <div class="results__inner">
                   <h2 class="visually-hidden">Результат питания кормом cat energy</h2>
                   <p class="title results__title">Живой пример</p>
                   <p class="text results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
                   <dl class="results__desc-list data-list">
-                     <div class="data-list__element data-list__descr-reverse">
+                     <div class="data-list__element">
                         <dt class="data-list__num">снижение веса</dt>
-                        <dd class="data-list__descr">5 кг</dd>
+                        <dd class="data-list__descr data-list__descr_reverse">5 кг</dd>
                      </div>
-                     <div class="data-list__element data-list__descr-reverse">
+                     <div class="data-list__element">
                         <dt class="data-list__num">затрачено времени</dt>
-                        <dd class="data-list__descr">60 дней</dd>
+                        <dd class="data-list__descr data-list__descr_reverse">60 дней</dd>
                      </div>
                      <div class="data-list__element data-list__element_borderless">
-                        <dt class="data-list__num data-list__num_text-small">затраты на питание:</dt>
-                        <dd class="data-list__descr data-list__descr_text-big">15 000 руб.</dd>
+                        <dt class="data-list__num data-list__num_small">затраты на питание:</dt>
+                        <dd class="data-list__descr data-list__descr_big">15 000 руб.</dd>
                      </div>
                   </dl>
                </div>
@@ -101,7 +103,6 @@
                      <span>стало</span>
                   </div>
                </div>
-
             </div>
          </section>
 

@@ -1,18 +1,10 @@
 @import "fonts";
 @import "vars";
 @import "settings";
+@import "mixins/hover";
 @import "common";
 @import "./components/header";
 @import "./components/hero";
-
-.service-list__link :where(line, path) {
-   transition: transform var(--hover-transition);
-}
-
-.service-list__link:hover line {
-   transform: scaleX(calc(26 / 18));
-}
-
-.service-list__link:hover path {
-   transform: translateX(8px);
-}
+@import "./components/services";
+@import "./components/benefits";
+@import "./components/results";
