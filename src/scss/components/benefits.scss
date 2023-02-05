@@ -1,0 +1,45 @@
+.benefits {
+   padding-block: 27px 42px;
+
+   &__title {
+      margin-bottom: 37px;
+   }
+}
+
+.benefits-list {
+   &__item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+
+      &::before {
+         min-width: var(--_w, 60px);
+         margin-right: 20px;
+         background-image: var(--_icon);
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         content: "";
+         aspect-ratio: 1/1;
+      }
+
+      &_leaf {
+         --_icon: url(@img/icons/icons.svg#leaf-icon);
+      }
+
+      &_boiling {
+         --_icon: url(@img/icons/icons.svg#boiling-water-icon);
+      }
+
+      &_cutlery {
+         --_icon: url(@img/icons/icons.svg#cutlery-icon);
+      }
+
+      &_clock {
+         --_icon: url(@img/icons/icons.svg#clock-icon);
+      }
+   }
+}

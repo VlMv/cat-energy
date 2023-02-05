@@ -1,0 +1,34 @@
+.hero {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   padding-top: 27px;
+   background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, url(@img/background/cat-hero-mobile.jpg) 65% top / auto 302px no-repeat;
+
+   &__pad-wrapper {
+
+   }
+
+   &__title {
+      margin-bottom: 25px;
+   }
+
+   &__slogan {
+      margin-bottom: 30px;
+      color: var(--clr-white);
+      font-size: 14px;
+      font-family: var(--font-oswald);
+      line-height: 14px;
+      text-align: center;
+      text-transform: uppercase;
+   }
+
+   &__img {
+      display: block;
+      margin-bottom: 2px;
+      object-fit: contain;
+   }
+
+   &__link {}
+}

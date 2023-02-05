@@ -1,0 +1,86 @@
+.services {
+   padding-top: 22px;
+}
+
+.service-list {
+   &__item {
+      &:not(:last-child) {
+         margin-bottom: 21px;
+      }
+   }
+}
+
+.service-item {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   min-height: 266px;
+   padding: 22px;
+   background-color: var(--clr-basic-grey);
+
+   &__subtitle {
+      position: relative;
+      display: flex;
+      align-items: center;
+      margin-bottom: 21px;
+
+      &::before {
+         min-width: var(--_w);
+         min-height: var(--_h);
+         margin-right: var(--_margin);
+         background-image: var(--_cat);
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: cover;
+         content: "";
+      }
+
+      &_slim {
+         --_cat: url(@img/icons/icons.svg#slimm-cat-icon);
+         --_w: 50px;
+         --_h: 53px;
+         --_margin: 19px;
+      }
+
+      &_muscle {
+         --_cat: url(@img/icons/icons.svg#muscle-cat-icon);
+         --_w: 67px;
+         --_h: 50px;
+         --_margin: 11px;
+
+         transform: translateX(-9px);
+      }
+   }
+
+   &__descr {
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--clr-border-medium-grey);
+   }
+
+   &__link {
+      margin-top: auto;
+      color: var(--clr-black);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 16px;
+
+      & span {
+         margin-right: 12px;
+      }
+
+      & :where(line, path) {
+         transition: transform var(--hover-transition);
+      }
+
+      @include hover {
+         &:hover line {
+            transform: scaleX(calc(26 / 18));
+         }
+
+         &:hover path {
+            transform: translateX(8px);
+         }
+      }
+   }
+}
