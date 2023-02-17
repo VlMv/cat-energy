@@ -8,17 +8,19 @@
 }
 
 .pad-wrapper {
-   // fluid padding, clamp generator
+   // clamp generator 10px/320 - 30px/768
    padding-inline: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
 
-   @media (min-width: 768px) {
+   @include media-768 {
+      // clamp generator 30px/768 - 110px/1440
       padding-inline: clamp(1.875rem, -3.839rem + 11.9vw, 6.875rem);
    }
 }
 
 .link {
    display: block;
-   color: currentcolor;
+   width: fit-content;
+   color: var(--clr-black);
    font-family: var(--font-oswald);
    text-align: center;
    text-transform: uppercase;
@@ -50,13 +52,22 @@
 .page-title {
    color: var(--clr-black);
    font-weight: 400;
-   font-size: 36px;
+
+   // 36px/320 - 60px/768
+   font-size: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem);
    font-family: var(--font-oswald);
-   line-height: 36px;
+
+   // 36px/320 - 60px/768
+   line-height: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem);
 
    &_white {
       color: var(--clr-white);
       text-align: center;
+
+      @include media-500 {
+         color: var(--clr-black);
+         text-align: left;
+      }
    }
 }
 
