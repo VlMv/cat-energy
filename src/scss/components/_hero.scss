@@ -6,8 +6,8 @@
    padding-top: 27px;
    background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, url(@img/background/cat-hero-mobile.jpg) 65% top / auto 302px no-repeat;
 
-   &__pad-wrapper {
-
+   @include media-500 {
+      background: var(--clr-white);
    }
 
    &__title {
@@ -17,11 +17,20 @@
    &__slogan {
       margin-bottom: 30px;
       color: var(--clr-white);
-      font-size: 14px;
+
+      // 14px/320 - 20px/768
+      font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem);
       font-family: var(--font-oswald);
-      line-height: 14px;
+
+      // 14px/320 - 20px/768
+      line-height: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem);
       text-align: center;
       text-transform: uppercase;
+
+      @include media-500 {
+         color: var(--clr-black);
+         text-align: left;
+      }
    }
 
    &__img {
@@ -30,5 +39,9 @@
       object-fit: contain;
    }
 
-   &__link {}
+   &__link {
+      @include media-500 {
+         min-width: 244px;
+      }
+   }
 }

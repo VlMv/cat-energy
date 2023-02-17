@@ -72,36 +72,43 @@
          </section>
 
          <section class="results pad-wrapper">
-            <div class="wrap results__wrap">
-               <div class="results__inner">
-                  <h2 class="visually-hidden">Результат питания кормом cat energy</h2>
-                  <p class="title results__title">Живой пример</p>
-                  <p class="text results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-                  <dl class="results__desc-list data-list">
+            <div class="results__inner">
+               <h2 class="visually-hidden">Результат питания кормом cat energy</h2>
+               <p class="title results__title">Живой пример</p>
+               <p class="text results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+               <dl class="results__desc-list data-list">
+                  <div class="data-list__container">
                      <div class="data-list__element">
-                        <dt class="data-list__num">снижение веса</dt>
-                        <dd class="data-list__descr data-list__descr_reverse">5 кг</dd>
+                        <dt class="data-list__descr">снижение веса</dt>
+                        <dd class="data-list__num data-list__num_reverse">5 кг</dd>
                      </div>
                      <div class="data-list__element">
-                        <dt class="data-list__num">затрачено времени</dt>
-                        <dd class="data-list__descr data-list__descr_reverse">60 дней</dd>
+                        <dt class="data-list__descr">затрачено времени</dt>
+                        <dd class="data-list__num data-list__num_reverse">60 дней</dd>
                      </div>
-                     <div class="data-list__element data-list__element_borderless">
-                        <dt class="data-list__num data-list__num_small">затраты на питание:</dt>
-                        <dd class="data-list__descr data-list__descr_big">15 000 руб.</dd>
-                     </div>
-                  </dl>
+                  </div>
+                  <div class="data-list__element data-list__element_borderless">
+                     <dt class="data-list__expense">затраты на питание:</dt>
+                     <dd class="data-list__price">15 000 руб.</dd>
+                  </div>
+               </dl>
+            </div>
+            <div class="results__comparison">
+               <div class="results__picture">
+                  <img class="results__fat-img" src="@img/fat-cat.png" alt="был толстый, ленивый кот Борис с разноцветными глазами" width="677" height="520">
+                  <img class="results__skinny-img" src="@img/skinny-cat.png" alt="стал худой, подтянутый кот Борис с разноцветными глазами" width="545" height="520">
                </div>
-               <div class="results__comparison">
-                  <div class="results__picture">
-                     <img src="@img/fat-cat.png" alt="было: толстый кот Борис с разноцветными глазами">
-                     <img src="@img/skinny-cat.png" alt="стало: худой кот Борис с разноцветными глазами">
-                  </div>
-                  <div class="results__range-control" aria-hidden="true">
+               <div class="results__controls cat-img-controls" aria-hidden="true">
+                  <label class="cat-img-controls__btn-box">
                      <span>было</span>
-                     <input class="results__range-slider" type="range" min="0" max="100" value="50">
+                     <button class="cat-img-controls__btn" type="button"></button>
                      <span>стало</span>
-                  </div>
+                  </label>
+                  <label class="cat-img-controls__slider-box">
+                     <span>было</span>
+                     <input class="cat-img-controls__range-slider" type="range" min="0" max="100" value="50">
+                     <span>стало</span>
+                  </label>
                </div>
             </div>
          </section>

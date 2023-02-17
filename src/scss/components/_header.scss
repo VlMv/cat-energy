@@ -7,6 +7,11 @@
    padding-bottom: 14px;
    background-color: var(--clr-white);
 
+   @include media-768 {
+      padding-top: 27px;
+      padding-bottom: 0;
+   }
+
    &__logo_mobile {
       margin-left: auto;
       padding-top: 9px;
@@ -21,7 +26,7 @@
          opacity: 0.6;
       }
 
-      @media (min-width: 768px) {
+      @include media-768 {
          display: none;
       }
 
@@ -51,16 +56,17 @@
    }
 
    &__img {
-      @media (min-width: 768px) {
-         margin-right: 5px;
+      @include media-768 {
+         margin-right: 7px;
       }
    }
 
    &__title {
       display: none;
 
-      @media (min-width: 768px) {
+      @include media-768 {
          display: initial;
+         width: 111px;
       }
    }
 }
@@ -73,6 +79,10 @@
    background-color: transparent;
    border: none;
    transition: transform var(--hover-transition);
+
+   @include media-768 {
+      display: none;
+   }
 
    &::before,
    &::after {
@@ -96,16 +106,16 @@
    }
 
    &-bar {
-      --_black-bar: linear-gradient(180deg, var(--clr-black) 0 0);
-      --_bar-size: auto 2px no-repeat;
+      --black-bar: linear-gradient(180deg, var(--clr-black) 0 0);
+      --bar-size: auto 2px no-repeat;
 
       display: block;
       width: 100%;
       height: 100%;
       background:
-         var(--_black-bar) top / var(--_bar-size),
-         var(--_black-bar) center / var(--_bar-size),
-         var(--_black-bar) bottom / var(--_bar-size);
+         var(--black-bar) top / var(--bar-size),
+         var(--black-bar) center / var(--bar-size),
+         var(--black-bar) bottom / var(--bar-size);
       transform: scale(var(--_shrink, 100%));
       transition: transform var(--hover-transition);
    }
@@ -120,9 +130,20 @@
    min-height: 193px;
    background-color: var(--clr-white);
    transform: scale(var(--_expand, 0));
-   transform-origin: 91% -14%;
-   transition: transform var(--hover-transition);
+   transform-origin: 93vw -15%;
+   opacity: var(--_expand, 0);
+   transition: transform var(--hover-transition), opacity var(--hover-transition);
    will-change: transform;
+
+   @include media-768 {
+      --_expand: 1;
+
+      position: static;
+      z-index: initial;
+      width: initial;
+      min-height: initial;
+      margin-left: auto;
+   }
 
    &__list {
       display: flex;
@@ -130,6 +151,11 @@
       justify-content: start;
       width: 100%;
       height: 100%;
+
+      @include media-768 {
+         flex-direction: row;
+         gap: 35px;
+      }
    }
 
    &__item {
@@ -141,14 +167,40 @@
       text-transform: uppercase;
       border-top: 1px solid var(--clr-border-light-grey);
 
+      @include media-768 {
+         padding-block: 9px;
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 24px;
+         border-top: none;
+
+         @include hover {
+            &:hover {
+               opacity: 0.6;
+            }
+         }
+
+         &:active {
+            opacity: var(--opacity-action);
+         }
+      }
+
       &_active {
          border-bottom: 2px solid transparent;
+
+         @include media-768 {
+            border-bottom-color: var(--clr-basic-green);
+         }
       }
 
       & a {
          display: block;
          width: 100%;
          padding: 22px;
+
+         @include media-768 {
+            padding: 0;
+         }
       }
    }
 }

@@ -2,9 +2,11 @@
 @import "vars";
 @import "settings";
 @import "mixins/hover";
+@import "mixins/breakpoints";
 @import "common";
 @import "./components/header";
 @import "./components/hero";
 @import "./components/services";
 @import "./components/benefits";
 @import "./components/results";
+@import "./components/footer";
