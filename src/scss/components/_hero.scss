@@ -1,17 +1,34 @@
 .hero {
-   position: relative;
    display: flex;
    flex-direction: column;
    justify-content: start;
-   padding-top: 27px;
+
+   // 37px/320 - 61px/768
+   padding-top: clamp(1.688rem, 0.17rem + 7.59vw, 3.813rem);
+
+   // 20px/320 - 117px/768
+   padding-left: clamp(1.25rem, -3.036rem + 21.43vw, 7.25rem);
    background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, url(@img/background/cat-hero-mobile.jpg) 65% top / auto 302px no-repeat;
+   isolation: isolate;
 
    @include media-500 {
+      margin-bottom: -57px;
       background: var(--clr-white);
+   }
+
+   @include media-768 {
+      // 117px/768 - 190px/1440
+      padding-left: clamp(7.313rem, 2.098rem + 10.86vw, 11.875rem);
    }
 
    &__title {
       margin-bottom: 25px;
+
+      @include media-500 {
+         order: 1;
+         max-width: 414px;
+         margin-bottom: 39px;
+      }
    }
 
    &__slogan {
@@ -28,8 +45,19 @@
       text-transform: uppercase;
 
       @include media-500 {
+         order: 2;
+         margin-bottom: 50px;
          color: var(--clr-black);
          text-align: left;
+      }
+   }
+
+   &>picture {
+      @include media-500 {
+         z-index: -1;
+         order: 4;
+         width: 100%;
+         transform: translate(-4%, -63px) scale(1.07);
       }
    }
 
@@ -37,11 +65,19 @@
       display: block;
       margin-bottom: 2px;
       object-fit: contain;
+
+      @include media-500 {
+         width: 100%;
+         margin-bottom: 0;
+      }
    }
 
    &__link {
       @include media-500 {
+         order: 3;
+         width: fit-content;
          min-width: 244px;
+         min-height: 54px;
       }
    }
 }

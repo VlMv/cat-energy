@@ -92,17 +92,13 @@
       width: 100%;
       height: 2px;
       background-color: var(--clr-black);
-      transform: translate(-50%) rotate(var(--_angle)) scale(var(--_scale, 0));
+      transform: translate(-50%) rotate(calc(var(--_rotate, 1) * 45deg)) scale(var(--_scale, 0));
       transition: transform var(--hover-transition);
       content: "";
    }
 
-   &::before {
-      --_angle: 45deg;
-   }
-
    &::after {
-      --_angle: -45deg;
+      --_rotate: -1;
    }
 
    &-bar {

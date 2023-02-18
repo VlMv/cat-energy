@@ -49,7 +49,7 @@
          width: 100%;
          margin-top: 70px;
          -webkit-mask-image: linear-gradient(to right, #000 var(--_mask-width, 50%), #0000 0);
-         mask-image: linear-gradient(to right, #000 (--_mask-width, 50%), #0000 0);
+         mask-image: linear-gradient(to right, #000 var(--_mask-width, 50%), #0000 0);
       }
    }
 
