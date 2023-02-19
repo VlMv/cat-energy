@@ -111,7 +111,11 @@
 .title {
    color: var(--clr-black);
    font-weight: 400;
-   font-size: 36px;
+
+   // 36px/320 - 60px/768
+   font-size: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem);
    font-family: var(--font-oswald);
-   line-height: 40px;
+
+   // 40px/320 - 60px/768
+   line-height: clamp(2.5rem, 1.607rem + 4.46vw, 3.75rem);
 }
