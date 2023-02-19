@@ -19,18 +19,21 @@
 
 .link {
    display: block;
-   width: fit-content;
    color: var(--clr-black);
    font-family: var(--font-oswald);
    text-align: center;
    text-transform: uppercase;
 
+   // padding: 11px 26px;
    &_green-box {
-      padding: 11px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
       color: var(--clr-white);
-      font-size: 14px;
+      font-size: 16px;
       font-family: var(--font-oswald);
-      line-height: 18px;
+      line-height: 20px;
       background-color: var(--clr-basic-green);
 
       @include hover {
@@ -46,6 +49,16 @@
       &:active span {
          opacity: var(--opacity-action);
       }
+   }
+
+   &_big-font {
+      padding: 11px 26px;
+
+      // 14px/320 - 20px/768
+      font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem);
+
+      // 18px/320 - 20px/768
+      line-height: clamp(1.125rem, 1.036rem + 0.45vw, 1.25rem);
    }
 }
 
@@ -74,7 +87,9 @@
 .subtitle {
    color: var(--clr-black);
    font-weight: 400;
-   font-size: 24px;
+
+   // 24px/320 - 36px/768
+   font-size: clamp(1.5rem, 0.964rem + 2.68vw, 2.25rem);
    font-family: var(--font-oswald);
    line-height: 37px;
    text-transform: uppercase;
@@ -83,16 +98,24 @@
 .text {
    color: var(--clr-text-medium-grey);
    font-weight: 400;
-   font-size: 14px;
+
+   // 14px/320 - 16px/768
+   font-size: clamp(0.875rem, 0.786rem + 0.45vw, 1rem);
    font-family: Arial, sans-serif;
    font-style: normal;
-   line-height: 18px;
+
+   // 18px/320 - 24px/768
+   line-height: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
 }
 
 .title {
    color: var(--clr-black);
    font-weight: 400;
-   font-size: 36px;
+
+   // 36px/320 - 60px/768
+   font-size: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem);
    font-family: var(--font-oswald);
-   line-height: 40px;
+
+   // 40px/320 - 60px/768
+   line-height: clamp(2.5rem, 1.607rem + 4.46vw, 3.75rem);
 }

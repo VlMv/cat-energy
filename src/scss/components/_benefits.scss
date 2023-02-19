@@ -1,45 +1,117 @@
 .benefits {
    padding-block: 27px 42px;
 
+   @include media-630 {
+      padding-block: 45px 42px;
+      margin-bottom: 1px solid var(--clr-border-medium-grey);
+   }
+
    &__title {
-      margin-bottom: 37px;
+      margin-bottom: 38px;
+
+      @include media-630 {
+         margin-bottom: 72px;
+      }
    }
 }
 
 .benefits-list {
+   counter-reset: item-number;
+
+   @include media-630 {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      column-gap: 70px;
+      row-gap: 37px;
+   }
+
+   @include media-768 {
+      padding-right: 70px;
+      column-gap: 130px;
+   }
+
+   @include media-1024 {
+      padding-right: 0;
+      column-gap: 73px;
+   }
+
    &__item {
+      position: relative;
       display: flex;
       align-items: center;
+      isolation: isolate;
 
       &:not(:last-child) {
          margin-bottom: 20px;
+
+         @include media-630 {
+            margin-bottom: 0;
+         }
+      }
+
+      &:first-child {
+         --_left-offset: 118px;
+      }
+
+      @include media-630 {
+         flex-direction: column;
+         align-items: start;
+         width: 250px;
+         min-height: 280px;
+         counter-increment: item-number;
       }
 
       &::before {
          min-width: var(--_w, 60px);
          margin-right: 20px;
-         background-image: var(--_icon);
+         background-color: var(--clr-basic-green);
+         background-image: var(--icon);
          background-repeat: no-repeat;
          background-position: center;
-         background-size: cover;
+         background-size: 30px 31px;
          content: "";
          aspect-ratio: 1/1;
+
+         @include media-630 {
+            --_w: 80px;
+
+            margin-right: 0;
+            margin-bottom: 31px;
+         }
+      }
+
+      &::after {
+         @include media-630 {
+            position: absolute;
+            top: 0;
+            left: var(--_left-offset, 113px);
+            z-index: -1;
+            display: block;
+            color: var(--clr-basic-grey);
+            font-weight: 400;
+            font-size: 280px;
+            font-family: var(--font-oswald);
+            line-height: 200px;
+            text-align: right;
+            content: counter(item-number);
+         }
       }
 
       &_leaf {
-         --_icon: url(@img/icons/icons.svg#leaf-icon);
+         --icon: url(@img/icons/icons.svg#leaf-icon);
       }
 
       &_boiling {
-         --_icon: url(@img/icons/icons.svg#boiling-water-icon);
+         --icon: url(@img/icons/icons.svg#boiling-water-icon);
       }
 
       &_cutlery {
-         --_icon: url(@img/icons/icons.svg#cutlery-icon);
+         --icon: url(@img/icons/icons.svg#cutlery-icon);
       }
 
       &_clock {
-         --_icon: url(@img/icons/icons.svg#clock-icon);
+         --icon: url(@img/icons/icons.svg#clock-icon);
       }
    }
 }
