@@ -7,8 +7,13 @@
    <div class="page-wrapper">
 
       @@include('html/header.html', {
-      "active":"main-nav__item_active", "active-catalog":"", "active-form":""
+      "active":"main-nav__item_active ",
+      "active-catalog":"",
+      "active-form":"",
+      "index-link":"link_white",
+      "index-active":"index-item-active"
       })
+
       <main class="index-main">
          <h1 class="visually-hidden">сервис функционального питания для котов</h1>
 
@@ -75,28 +80,28 @@
             <div class="results__inner">
                <h2 class="visually-hidden">Результат питания кормом cat energy</h2>
                <p class="title results__title">Живой пример</p>
-               <p class="text results__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-               <dl class="results__desc-list data-list">
-                  <div class="data-list__container">
-                     <div class="data-list__element">
-                        <dt class="data-list__descr">снижение веса</dt>
-                        <dd class="data-list__num data-list__num_reverse">5 кг</dd>
+               <p class="text results__text">Борис сбросил 5&nbsp;кг за&nbsp;2&nbsp;месяца, просто заменив свой обычный корм на&nbsp;Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он&nbsp;не&nbsp;менял своих привычек и по&#8209;прежнему спит по&nbsp;16&nbsp;часов в&nbsp;день.</p>
+               <div class="results__data-container data-container">
+                  <dl class="data-container__list">
+                     <div class="data-container__element">
+                        <dt class="data-container__descr">снижение веса</dt>
+                        <dd class="data-container__num data-container__num_reverse">5 кг</dd>
                      </div>
-                     <div class="data-list__element">
-                        <dt class="data-list__descr">затрачено времени</dt>
-                        <dd class="data-list__num data-list__num_reverse">60 дней</dd>
+                     <div class="data-container__element">
+                        <dt class="data-container__descr">затрачено времени</dt>
+                        <dd class="data-container__num data-container__num_reverse">60 дней</dd>
                      </div>
-                  </div>
-                  <div class="data-list__element data-list__element_borderless">
-                     <dt class="data-list__expense">затраты на питание:</dt>
-                     <dd class="data-list__price">15 000 руб.</dd>
-                  </div>
-               </dl>
+                  </dl>
+                  <dl class="data-container__element data-container__element_borderless">
+                     <dt class="data-container__expense">затраты на питание:</dt>
+                     <dd class="data-container__price">15 000 руб.</dd>
+                  </dl>
+               </div>
             </div>
             <div class="results__comparison">
                <div class="results__picture">
-                  <img class="results__fat-img" src="@img/fat-cat.png" alt="был толстый, ленивый кот Борис с разноцветными глазами" width="677" height="520">
-                  <img class="results__skinny-img" src="@img/skinny-cat.png" alt="стал худой, подтянутый кот Борис с разноцветными глазами" width="545" height="520">
+                  <img class="results__img results__img_fat" src="@img/fat-cat.png" alt="был толстый, ленивый кот Борис с разноцветными глазами" width="677" height="520">
+                  <img class="results__img results__img_skinny" src="@img/skinny-cat.png" alt="стал худой, подтянутый кот Борис с разноцветными глазами" width="545" height="520">
                </div>
                <div class="results__controls cat-img-controls" aria-hidden="true">
                   <label class="cat-img-controls__btn-box">

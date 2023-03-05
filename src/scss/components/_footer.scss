@@ -1,12 +1,24 @@
 .page-footer {
+   &__contacts {
+      padding-top: 28px;
 
-   &__contacts {}
+      @include media-630 {
+         padding-top: 66px;
+      }
+   }
 
    &__socials-box {}
 }
 
 .contacts {
-   padding-top: 28px;
+   position: relative;
+   isolation: isolate;
+
+   @include media-1024 {
+      min-height: 400px;
+      padding-top: 95px;
+      padding-left: 110px;
+   }
 
    &__address-box {
       display: flex;
@@ -15,8 +27,18 @@
       // 20px/320 - 71px/768
       padding-inline: clamp(1.25rem, -1.027rem + 11.38vw, 4.438rem);
 
-      @media (min-width: 500px) {
+      @include media-500 {
          align-items: center;
+      }
+
+      @include media-630 {
+         padding-bottom: 29px;
+      }
+
+      @include media-1024 {
+         width: 570px;
+         padding: 66px 76px 59px;
+         background-color: var(--clr-white);
       }
    }
 
@@ -43,7 +65,7 @@
       font-style: normal;
       line-height: 20px;
 
-      @media (min-width: 500px) {
+      @include media-500 {
          text-align: right;
 
          &>span {
@@ -51,17 +73,37 @@
             margin-top: 20px;
          }
       }
+
+      @include media-1024 {
+         text-align: left;
+      }
    }
 
-   &__map {}
+   &__map {
+      @include media-630 {
+         height: 400px;
+      }
+
+      @include media-1024 {
+         position: absolute;
+         inset: 0;
+         z-index: -1;
+      }
+
+      &>picture {
+         z-index: -2;
+         width: 100%;
+         height: inherit;
+      }
+   }
 
    &__map-img {
       width: 100%;
+      height: inherit;
       object-fit: cover;
    }
 }
 
-// social box for width 630px flex-row
 .socials-box {
    display: flex;
    flex-direction: column;
@@ -70,14 +112,20 @@
    padding-bottom: 22px;
    background-color: var(--clr-basic-grey);
 
-   @media (min-width: 630px) {
+   @include media-630 {
       flex-direction: row;
+      padding-top: 55px;
+      padding-bottom: 51px;
+   }
+
+   @include media-1024 {
+      padding-top: 60px;
    }
 
    &__logo {
-      margin-bottom: 31px;
+      margin-bottom: 26px;
 
-      @media (min-width: 630px) {
+      @include media-630 {
          margin-bottom: 0;
       }
    }
@@ -85,7 +133,7 @@
    &__socials-list {
       margin-bottom: 21px;
 
-      @media (min-width: 630px) {
+      @include media-630 {
          margin-bottom: 0;
          margin-inline: auto;
       }
@@ -93,7 +141,15 @@
 }
 
 .logo-title {
-   width: 135px;
+   min-width: 135px;
+
+   @include media-768 {
+      transform: translateX(-4px);
+   }
+
+   &__img {
+      width: 135px;
+   }
 }
 
 .socials-list {
@@ -107,7 +163,7 @@
    border-bottom: var(--border);
    padding-block: 21px 20px;
 
-   @media (min-width: 630px) {
+   @include media-630 {
       --border: none;
 
       gap: initial;
@@ -125,7 +181,7 @@
       background-size: var(--width) var(--height);
       transition: background var(--hover-transition);
 
-      @media (min-width: 630px) {
+      @include media-630 {
          width: 29px;
          height: 29px;
       }
@@ -139,7 +195,7 @@
          --width: 100%;
          --height: 16px;
 
-         @media (min-width: 630px) {
+         @include media-630 {
             --height: 29px;
             --width: 29px;
          }
@@ -156,7 +212,7 @@
          --width: 16px;
          --height: 16px;
 
-         @media (min-width: 630px) {
+         @include media-630 {
             --width: 23px;
             --height: 23px;
 
@@ -175,7 +231,7 @@
          --width: 22px;
          --height: 22px;
 
-         @media (min-width: 630px) {
+         @include media-630 {
             --width: 29px;
             --height: 29px;
 
@@ -197,7 +253,7 @@
    justify-content: start;
    width: 100%;
 
-   @media (min-width: 630px) {
+   @include media-630 {
       gap: 22px;
       justify-content: end;
       max-width: 163px;
@@ -226,7 +282,7 @@
       margin-left: auto;
       place-items: center;
 
-      @media (min-width: 630px) {
+      @include media-630 {
          margin-left: 0;
       }
 

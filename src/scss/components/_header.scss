@@ -12,6 +12,11 @@
       padding-bottom: 0;
    }
 
+   @include media-1024 {
+      padding-top: 55px;
+      background-color: transparent;
+   }
+
    &__logo_mobile {
       margin-left: auto;
       padding-top: 9px;
@@ -67,6 +72,10 @@
       @include media-768 {
          display: initial;
          width: 111px;
+      }
+
+      @include media-1024 {
+         width: 131px;
       }
    }
 }
@@ -141,6 +150,10 @@
       margin-left: auto;
    }
 
+   @include media-1024 {
+      background-color: transparent;
+   }
+
    &__list {
       display: flex;
       flex-direction: column;
@@ -164,10 +177,14 @@
       border-top: 1px solid var(--clr-border-light-grey);
 
       @include media-768 {
-         padding-block: 9px;
+         padding-block: 12px;
          font-weight: 400;
-         font-size: 18px;
-         line-height: 24px;
+
+         // 18px/768 - 20px/1440
+         font-size: clamp(1.125rem, 0.982rem + 0.3vw, 1.25rem);
+
+         // 20px/768 - 30px/1440
+         line-height: clamp(1.25rem, 0.536rem + 1.49vw, 1.875rem);
          border-top: none;
 
          @include hover {
@@ -179,6 +196,10 @@
          &:active {
             opacity: var(--opacity-action);
          }
+      }
+
+      @include media-1024 {
+         padding-block: 4px;
       }
 
       &_active {
@@ -197,6 +218,12 @@
          @include media-768 {
             padding: 0;
          }
+      }
+   }
+
+   .index-item-active {
+      @include media-1024 {
+         border-bottom-color: var(--clr-white);
       }
    }
 }

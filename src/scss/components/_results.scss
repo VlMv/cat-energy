@@ -3,71 +3,158 @@
    padding-bottom: 36px;
    background-color: var(--clr-basic-medium-grey);
 
+   @include media-768 {
+      padding-top: 43px;
+      padding-bottom: 66px;
+      background-image: linear-gradient(180deg, var(--clr-white) 0 var(--_gradient-white-size, 57%), var(--clr-basic-medium-grey) 0);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include media-1024 {
+         --_gradient-white-size: 19%;
+
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         padding-top: 0;
+      }
+
+      @include media-1440 {
+         --_gradient-white-size: 29%;
+      }
+   }
+
    &__inner {
       margin-bottom: 5px;
+
+      @include media-1024 {
+         max-width: 450px;
+         margin-bottom: 0;
+      }
+
+      @include media-1440 {
+         padding-top: 55px;
+      }
    }
 
    &__title {
       margin-bottom: 33px;
+
+      @include media-768 {
+         margin-bottom: 65px;
+      }
+
+      @include media-1440 {
+         margin-bottom: 148px;
+      }
    }
 
    &__text {
       margin-bottom: 25px;
+
+      @include media-768 {
+         margin-bottom: 52px;
+      }
+
+      @include media-1024 {
+         margin-bottom: 69px;
+      }
    }
 
-   &__desc-list {}
+   &__data-container {}
 
-   &__comparison {}
+   &__comparison {
+      @include media-1024 {
+         max-width: 500px;
+      }
+
+      @include media-1440 {
+         max-width: none;
+      }
+   }
 
    &__picture {
       display: grid;
       margin-bottom: 30px;
 
-      & picture {
+      @include media-768 {
+         margin-bottom: 12px;
+      }
+
+      @include media-1024 {
+         margin-bottom: 29px;
+      }
+
+      &>picture {
          grid-area: 1/-1;
+      }
+   }
 
-         & img {
-            object-fit: contain;
+   &__img {
+      object-fit: contain;
 
-            @media (min-width: 630px) {
-               height: 520px;
-            }
+      @include media-630 {
+         height: 519px;
+      }
+
+      @include media-1024 {
+         height: 390px;
+      }
+
+      @include media-1440 {
+         height: 519px;
+      }
+
+      &_fat {
+         margin-top: 40px;
+         transform: scale(var(--_scale, 1.11));
+         opacity: var(--_opacity, 1);
+         transition: opacity 0.4s ease-in;
+
+         @include media-630 {
+            --_scale: 1;
+
+            position: relative;
+            width: 100%;
+            margin-top: 70px;
+            -webkit-mask-image: linear-gradient(to right, #000 var(--_mask-width, var(--_base-mask-width, 50%)), #0000 0);
+            mask-image: linear-gradient(to right, #000 var(--_mask-width, var(--_base-mask-width, 50%)), #0000 0);
+         }
+
+         @include media-1024 {
+            --_base-mask-width: 53%;
+
+            margin-top: 0;
+            object-fit: cover;
+         }
+      }
+
+      &_skinny {
+         opacity: var(--_opacity, 0);
+         transition: opacity 0.4s ease-in;
+
+         @include media-630 {
+            width: 100%;
+            margin-top: 70px;
+            padding-left: 50px;
+            opacity: initial;
+            -webkit-mask-image: linear-gradient(to left, #000 var(--_mask-width, var(--_base-mask-width, 50%)), #0000 0);
+            mask-image: linear-gradient(to left, #000 var(--_mask-width, var(--_base-mask-width, 50%)), #0000 0);
+         }
+
+         @include media-1024 {
+            --_base-mask-width: 47%;
+
+            margin-top: 0;
+            padding-left: 38px;
          }
       }
    }
 
-   &__fat-img {
-      margin-top: 40px;
-      transform: scale(var(--_scale, 1.11));
-      opacity: var(--_opacity, 1);
-      transition: opacity 0.4s ease-in;
-
-      @media (min-width: 630px) {
-         --_scale: 1;
-
-         position: relative;
-         width: 100%;
-         margin-top: 70px;
-         -webkit-mask-image: linear-gradient(to right, #000 var(--_mask-width, 50%), #0000 0);
-         mask-image: linear-gradient(to right, #000 var(--_mask-width, 50%), #0000 0);
+   &__controls {
+      @include media-1024 {
+         margin-left: 40px;
       }
    }
-
-   &__skinny-img {
-      opacity: var(--_opacity, 0);
-      transition: opacity 0.4s ease-in;
-
-      @media (min-width: 630px) {
-         width: 100%;
-         margin-top: 70px;
-         padding-left: 50px;
-         opacity: initial;
-         -webkit-mask-image: linear-gradient(to left, #000 var(--_mask-width, 50%), #0000 0);
-         mask-image: linear-gradient(to left, #000 var(--_mask-width, 50%), #0000 0);
-      }
-   }
-
-   &__controls {}
 }
 
 .cat-img-controls {
@@ -82,17 +169,19 @@
 
    & span {
       color: var(--clr-black);
-      font-weight: 400;
-      font-size: 16px;
+
+      // 16px/320 - 20px/768
+      font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem);
       font-family: var(--font-oswald);
-      font-style: normal;
-      line-height: 20px;
+
+      // 20px/320 - 30px/768
+      line-height: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
       text-transform: uppercase;
    }
 
    &__btn-box {
       &>span {
-         @media (min-width: 630px) {
+         @include media-630 {
             display: none;
          }
       }
@@ -104,7 +193,7 @@
          padding-bottom: 3px;
          border-bottom: 1px dotted rgb(0 0 0 / 24%);
 
-         @media (min-width: 630px) {
+         @include media-630 {
             display: initial;
          }
       }
@@ -146,7 +235,7 @@
          content: "";
       }
 
-      @media (min-width: 630px) {
+      @include media-630 {
          display: none;
       }
    }
@@ -154,9 +243,9 @@
    &__range-slider {
       display: none;
 
-      @media (min-width: 630px) {
+      @include media-630 {
          display: block;
-         width: 428px;
+         width: 435px;
          height: 6px;
          background-color: var(--clr-border-medium-grey);
          border-radius: 6px;
@@ -209,7 +298,7 @@
    }
 }
 
-.data-list {
+.data-container {
    --row-gap: 19px;
    --col-gap: 31px;
    --width: 124px;
@@ -217,19 +306,29 @@
    display: grid;
    row-gap: var(--row-gap);
 
-   @media (min-width: 630px) {
+   @include media-630 {
       --col-gap: 42px;
       --width: 162px;
 
       grid-template-columns: calc((var(--width) * 2) + var(--col-gap)) 1fr;
    }
 
-   &__container {
+   @include media-1024 {
+      --row-gap: 55px;
+
+      grid-template-columns: auto;
+   }
+
+   &__list {
       display: grid;
       grid-auto-rows: 1fr;
       grid-template-columns: repeat(auto-fit, minmax(var(--width), 1fr));
       gap: var(--row-gap) var(--col-gap);
       place-items: center;
+
+      @include media-1024 {
+         grid-template-columns: repeat(2, var(--width));
+      }
    }
 
    &__element {
@@ -254,7 +353,7 @@
          border-radius: 3px;
          content: "";
 
-         @media (min-width: 768px) {
+         @include media-768 {
             min-height: 72px;
          }
       }
@@ -270,7 +369,7 @@
             display: none;
          }
 
-         @media (min-width: 630px) {
+         @include media-630 {
             flex-direction: column;
             align-items: end;
             align-self: center;
@@ -279,12 +378,19 @@
             row-gap: 10px;
          }
 
-         @media (min-width: 768px) {
+         @include media-768 {
             --_font-price-size: 20px;
+         }
+
+         @include media-1024 {
+            flex-direction: row;
+            justify-content: start;
+            justify-self: start;
+            column-gap: 63px;
          }
       }
 
-      @media (min-width: 768px) {
+      @include media-768 {
          --_font-num-size: 30px;
          --_font-descr-size: 14px;
          --_padding: 19px;
@@ -307,7 +413,7 @@
          order: -1;
       }
 
-      @media (min-width: 768px) {
+      @include media-768 {
          --margin: 15px;
       }
    }
@@ -325,10 +431,18 @@
       background-color: var(--clr-basic-medium-grey);
       padding-inline: var(--padding);
 
-      @media (min-width: 630px) {
+      @include media-630 {
          --padding: 7px;
 
          max-width: max-content;
+      }
+
+      @include media-768 {
+         background-color: var(--clr-white);
+      }
+
+      @include media-1024 {
+         background-color: var(--clr-basic-medium-grey);
       }
    }
 

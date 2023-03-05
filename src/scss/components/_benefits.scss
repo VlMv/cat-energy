@@ -2,8 +2,17 @@
    padding-block: 27px 42px;
 
    @include media-630 {
-      padding-block: 45px 42px;
-      margin-bottom: 1px solid var(--clr-border-medium-grey);
+      padding-block: 45px 6px;
+      border-bottom: 1px solid var(--clr-border-medium-grey);
+   }
+
+   @include media-1024 {
+      padding-block: 71px;
+      border-bottom-color: transparent;
+   }
+
+   @include media-1440 {
+      padding-bottom: 0;
    }
 
    &__title {
@@ -60,6 +69,10 @@
          width: 250px;
          min-height: 280px;
          counter-increment: item-number;
+      }
+
+      @include media-1024 {
+         min-height: 252px;
       }
 
       &::before {

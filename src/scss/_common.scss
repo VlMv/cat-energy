@@ -1,19 +1,42 @@
+html {
+   font-size: 16px;
+}
+
 .page-body {
+   height: 100%;
    background-color: var(--clr-white);
+
+   &__header {
+      margin-bottom: 27px;
+   }
 }
 
 .page-wrapper {
+   display: grid;
+   grid-template-rows: min-content 1fr min-content;
    max-width: 1440px;
+   min-height: 100vh;
    margin-inline: auto;
+   overflow: hidden;
 }
 
 .pad-wrapper {
-   // clamp generator 10px/320 - 30px/768
+   // clamp generator 20px/320 - 30px/768
    padding-inline: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
 
    @include media-768 {
-      // clamp generator 30px/768 - 110px/1440
+      // 30px/768 - 110px/1440
       padding-inline: clamp(1.875rem, -3.839rem + 11.9vw, 6.875rem);
+   }
+
+   &_form {
+      // 20px/320 - 70px/768
+      padding-inline: clamp(1.25rem, -0.982rem + 11.16vw, 4.375rem);
+
+      @include media-768 {
+         // 70px/768 - 110px/1440
+         padding-inline: clamp(4.375rem, 1.518rem + 5.95vw, 6.875rem);
+      }
    }
 }
 
@@ -24,7 +47,6 @@
    text-align: center;
    text-transform: uppercase;
 
-   // padding: 11px 26px;
    &_green-box {
       display: flex;
       align-items: center;
@@ -59,6 +81,12 @@
 
       // 18px/320 - 20px/768
       line-height: clamp(1.125rem, 1.036rem + 0.45vw, 1.25rem);
+   }
+
+   &_white {
+      @include media-1024 {
+         color: var(--clr-white);
+      }
    }
 }
 
@@ -118,4 +146,69 @@
 
    // 40px/320 - 60px/768
    line-height: clamp(2.5rem, 1.607rem + 4.46vw, 3.75rem);
+}
+
+.page-input {
+   height: 45px;
+   padding: 14px;
+   padding-top: 18px;
+   border: 1px solid var(--clr-border-light-grey);
+   border-radius: 0;
+
+   @include media-768 {
+      height: 52px;
+   }
+
+   &::placeholder {
+      color: var(--clr-text-medium-grey);
+      font-size: var(--font-size-small);
+      font-family: var(--font-oswald);
+      line-height: var(--font-height-small);
+      text-transform: uppercase;
+   }
+}
+
+.form-description {
+   color: var(--clr-text-medium-grey);
+   font-size: var(--font-size-small);
+   font-family: var(--font-oswald);
+   line-height: var(--font-height-small);
+   text-transform: uppercase;
+}
+
+.btn {
+   color: var(--clr-black);
+   font-size: 16px;
+   font-family: var(--font-oswald);
+   line-height: 20px;
+   text-transform: uppercase;
+   background-color: transparent;
+   border: none;
+
+   &_green-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7px;
+      color: var(--clr-white);
+      font-size: var(--font-size-small);
+
+      // 20px/320 - 30px/768
+      line-height: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
+      background-color: var(--clr-basic-green);
+
+      @include hover {
+         &:hover {
+            background-color: var(--clr-dark-green);
+         }
+      }
+
+      &:active {
+         background-color: var(--clr-dark-green);
+      }
+   }
+
+   &:active span {
+      opacity: var(--opacity-action);
+   }
 }

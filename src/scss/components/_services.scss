@@ -1,5 +1,9 @@
 .services {
    padding-top: 22px;
+
+   @include media-1024 {
+      padding-top: 82px;
+   }
 }
 
 .service-list {
@@ -15,8 +19,7 @@
    }
 
    @include media-1024 {
-      // 400px/1024 - 570px/1440
-      grid-template-columns: repeat(auto-fit, minmax(clamp(25rem, -1.154rem + 40.87vw, 35.625rem), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
    }
 
    &__item {}
@@ -81,14 +84,19 @@
          margin-bottom: 24px;
       }
 
+      @include media-1024 {
+         margin-bottom: 39px;
+      }
+
       &::before {
-         min-width: var(--w);
-         min-height: var(--h);
-         margin-right: var(--margin);
+         min-width: var(--_w, 67px);
+         min-height: var(--_h, 53px);
+         margin-right: var(--_margin, 1px);
          background-image: var(--cat);
          background-repeat: no-repeat;
          background-position: center;
          background-size: cover;
+         transform: translateX(var(--_x-offset, -9px));
          content: "";
 
          @include media-630 {
@@ -97,24 +105,36 @@
 
          @include media-1024 {
             display: block;
+            min-width: var(--_w, 134px);
+            min-height: var(--_h, 106px);
+            margin-right: var(--_margin, 27px);
+            transform: translateX(var(--_x-offset, -18px));
          }
       }
 
       &_slim {
-         --w: 50px;
-         --h: 53px;
-         --margin: 19px;
+         --_w: 50px;
+         --_h: 53px;
+         --_margin: 19px;
+         --_x-offset: 0;
+
+         @include media-1024 {
+            --_w: 100px;
+            --_h: 106px;
+
+            // 53px/1024 - 62px/1440
+            --_margin: clamp(3.313rem, 1.928rem + 2.16vw, 3.875rem);
+         }
       }
 
       &_muscle {
-         --w: 67px;
-         --h: 50px;
-         --margin: 11px;
+         --_w: 67px;
+         --_h: 50px;
 
-         transform: translateX(-9px);
-
-         @include media-630 {
-            transform: none;
+         @include media-1024 {
+            --_w: 134px;
+            --_h: 106px;
+            --_margin: 28px;
          }
       }
    }
@@ -144,6 +164,10 @@
          justify-content: space-between;
          width: auto;
          border-top: none;
+      }
+
+      @include media-1024 {
+         padding-top: 14px;
       }
 
       & span {

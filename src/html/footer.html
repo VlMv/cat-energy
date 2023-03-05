@@ -5,11 +5,22 @@
          <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
       </div>
       <div class="contacts__map">
-         <img class="contacts__map-img" src="@img/map-path.png" alt="адресс офиса ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+         <picture>
+            <source media="(min-width: 1024px)" srcset="@img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="@img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440" height="400" type="image/png">
+
+            <source media="(min-width: 630px)" srcset="@img/map-tablet.webp 1x, @img/map-tablet@2x.webp 2x" width="768" height="400" type="image/webp">
+            <source media="(min-width: 630px)" srcset="@img/map-tablet.png 1x, @img/map-tablet@2x.png 2x" width="768" height="400" type="image/png">
+
+            <source srcset="@img/map-mobile.webp 1x, @img/map-mobile@2x.webp 2x" type="image/webp">
+            <img class="contacts__map-img" src="@img/map-mobile.png" srcset="@img/map-mobile.png 1x, @img/map-mobile@2x.png 2x" alt="адрес офиса на карте города Санкт-Петербург" width="320" height="362">
+         </picture>
       </div>
    </div>
    <div class="page-footer__socials-box socials-box pad-wrapper">
-      <img class="socials-box__logo logo-title" src="@img/icons/icons.svg#logo-title" alt="cat energy логотип" width="128" height="24">
+      <a class="socials-box__logo logo-title" href="#">
+         <img class="logo-title__img" src="@img/icons/icons.svg#logo-title" alt="cat energy логотип" width="128" height="24">
+      </a>
       <ul class="socials-box__socials-list socials-list list-reset">
          <li class="socials-list__item socials-list__item_vk">
             <a href="#" aria-label="наша страница вконтакте"></a>

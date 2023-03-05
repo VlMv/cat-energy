@@ -20,8 +20,8 @@ burger.addEventListener('click', function () {
 
 
 const catShapeToogleBtn = document.querySelector(".cat-img-controls__btn");
-const catSkinny = document.querySelector(".results__skinny-img");
-const catFat = document.querySelector(".results__fat-img");
+const catSkinny = document.querySelector(".results__img_skinny");
+const catFat = document.querySelector(".results__img_fat");
 
 catShapeToogleBtn.addEventListener('click', function () {
    if (!catSkinny.style.getPropertyValue("--_opacity")) {

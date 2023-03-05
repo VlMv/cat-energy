@@ -12,7 +12,7 @@ export const html = () => {
          extensions: ['jpg', 'jpeg', 'png'],
          retina: {
             1: '',
-            2: '@2x',
+            2: '@2x'
          }
       }))
 
