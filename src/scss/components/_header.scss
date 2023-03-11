@@ -27,6 +27,11 @@
          }
       }
 
+      &:focus-visible {
+         outline: 2px solid var(--clr-text-medium-grey);
+         outline-offset: 2px;
+      }
+
       &:active {
          opacity: 0.6;
       }
@@ -54,6 +59,11 @@
       &:hover {
          opacity: 0.8;
       }
+   }
+
+   &:focus-visible {
+      outline: 2px solid var(--clr-text-medium-grey);
+      outline-offset: 2px;
    }
 
    &:active {
@@ -88,6 +98,11 @@
    background-color: transparent;
    border: none;
    transition: transform var(--hover-transition);
+
+   &:focus-visible {
+      outline: 2px solid var(--clr-text-medium-grey);
+      outline-offset: 2px;
+   }
 
    @include media-768 {
       display: none;
@@ -177,7 +192,6 @@
       border-top: 1px solid var(--clr-border-light-grey);
 
       @include media-768 {
-         padding-block: 12px;
          font-weight: 400;
 
          // 18px/768 - 20px/1440
@@ -186,6 +200,7 @@
          // 20px/768 - 30px/1440
          line-height: clamp(1.25rem, 0.536rem + 1.49vw, 1.875rem);
          border-top: none;
+         padding-block: 12px;
 
          @include hover {
             &:hover {

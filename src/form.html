@@ -25,74 +25,74 @@
             <form class="page-form programm-form__page-form" action="https://echo.htmlacademy.ru" method="post">
 
                <div class="form-inner">
-                  <fieldset class="page-form__pet pet">
+                  <fieldset class="page-form__pet form-fieldset">
                      <legend class="visually-hidden">данные вашего питомца</legend>
-                     <label class="pet__name">
-                        <span class="pet__descr form-description">имя:*</span>
-                        <input class="pet__input page-input" type="text" name="pet-name" id="pet-name" required placeholder="барсик">
+                     <label class="form-fieldset__element label-box">
+                        <span class="form-description">имя:*</span>
+                        <input class="label-box__input" type="text" name="pet-name" id="pet-name" required placeholder="барсик">
                      </label>
-                     <label class="pet__weight">
-                        <span class="pet__descr form-description">вес (кг):*</span>
-                        <input class="pet__input page-input" type="number" step="0.1" name="pet-weight" id="pet-weight" required placeholder="7">
+                     <label class="form-fieldset__element label-box">
+                        <span class="form-description">вес (кг):*</span>
+                        <input class="label-box__input" type="number" step="0.1" name="pet-weight" id="pet-weight" placeholder="7" required>
                      </label>
-                     <label class="pet__age">
-                        <span class="pet__descr form-description">возраст (лет):*</span>
-                        <input class="pet__input page-input" type="number" step="0.1" name="pet-age" id="pet-age" placeholder="7">
+                     <label class="form-fieldset__element label-box">
+                        <span class="form-description">возраст (лет):*</span>
+                        <input class="label-box__input" type="number" step="0.1" name="pet-age" id="pet-age" placeholder="7" required>
                      </label>
                   </fieldset>
 
-                  <fieldset class="page-form__programm-type programm-type">
+                  <fieldset class="page-form__programm-type form-fieldset">
                      <legend class="visually-hidden">выбор программы питания</legend>
-                     <label class="programm-type__weight-loss">
+                     <label class="form-fieldset__element label-box label-box_radio">
                         <input class="visually-hidden" type="radio" name="feed-programm" id="weight-loss" value="weight-loss" checked>
-                        <span class="programm-type__descr form-description">похудение</span>
+                        <span class="form-description">похудение</span>
                      </label>
-                     <label class="programm-type__weight-gain">
+                     <label class="form-fieldset__element label-box label-box_radio">
                         <input class="visually-hidden" type="radio" name="feed-programm" id="weight-gain" value="weight-gain">
-                        <span class="programm-type__descr form-description">набор массы</span>
+                        <span class="form-description">набор массы</span>
                      </label>
-                     <label class="programm-type__weight-consultation">
+                     <label class="form-fieldset__element label-box label-box_radio">
                         <input class="visually-hidden" type="radio" name="feed-programm" id="weight-consultation" value="weight-consultation">
-                        <span class="programm-type__descr form-description">не знаю (Нужен ваш совет)</span>
+                        <span class="form-description">не знаю (Нужен ваш совет)</span>
                      </label>
                   </fieldset>
                </div>
 
-               <fieldset class="page-form__form-contacts form-contacts">
-                  <legend class="form-contacts__legend form-legend form-legend_green-line">Контактные данные (владельца кота)</legend>
-                  <label class="form-contacts__mail">
-                     <span class="form-contacts__descr form-description">e-mail:*</span>
-                     <input class="form-contacts__input page-input" type="email" name="owner-mail" id="owner-mail" required placeholder="kuklachev@gmail.com">
+               <fieldset class="page-form__form-contacts form-fieldset">
+                  <legend class="form-fieldset__legend form-legend form-legend_green-line">Контактные данные (владельца кота)</legend>
+                  <label class="form-fieldset__element label-box">
+                     <span class="form-description">e-mail:*</span>
+                     <input class="label-box__input" type="email" name="owner-mail" id="owner-mail" required placeholder="kuklachev@gmail.com">
                   </label>
-                  <label class="form-contacts__tel">
-                     <span class="form-contacts__descr form-description">телефон:*</span>
-                     <input class="form-contacts__input page-input" type="tel" name="owner-tel" id="owner-tel" required pattern="[0-9]{11}" placeholder="8 (960) 900-60-90" maxlength="11">
+                  <label class="form-fieldset__element label-box">
+                     <span class="form-description">телефон:*</span>
+                     <input class="label-box__input" type="tel" name="owner-tel" id="owner-tel" required pattern="[0-9]{11}" placeholder="8 (960) 900-60-90" maxlength="11">
                   </label>
                </fieldset>
 
-               <fieldset class="page-form__comment comment">
-                  <legend class="comment__legend form-legend form-legend_green-line">Комментарий</legend>
+               <fieldset class="page-form__comment form-fieldset__element">
+                  <legend class="form-fieldset__legend form-legend form-legend_green-line">Комментарий</legend>
                   <label for="comment" class="visually-hidden">текстовое поле для комментария</label>
-                  <textarea class="comment__comment-area" name="comment" id="comment" cols="30" rows="10" placeholder="расскажите обо всех повадках кота"></textarea>
+                  <textarea class="form-fieldset__textarea textarea" name="comment" id="comment" cols="30" rows="20" maxlength="500" placeholder="расскажите обо всех повадках кота"></textarea>
                </fieldset>
 
-               <fieldset class="page-form__additional additional">
-                  <legend class="additional__legend form-legend form-legend_green-line">Дополнительно</legend>
-                  <label class="additional__sweetener">
+               <fieldset class="page-form__additional form-fieldset__element">
+                  <legend class="form-fieldset__legend form-legend form-legend_green-line">Дополнительно</legend>
+                  <label class="form-fieldset__element label-box label-box_checkbox">
                      <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
-                     <span class="additional__descr form-description">сахарозаменитель</span>
+                     <span class="form-description">сахарозаменитель</span>
                   </label>
-                  <label class="additional__water">
+                  <label class="form-fieldset__element label-box label-box_checkbox">
                      <input class="visually-hidden" type="checkbox" name="water" id="water">
-                     <span class="additional__descr form-description">питьевая вода</span>
+                     <span class="form-description">питьевая вода</span>
                   </label>
-                  <label class="additional__milk">
+                  <label class="form-fieldset__element label-box label-box_checkbox">
                      <input class="visually-hidden" type="checkbox" name="milk" id="milk">
-                     <span class="additional__descr form-description">молоко</span>
+                     <span class="form-description">молоко</span>
                   </label>
-                  <label class="additional__vitamins">
+                  <label class="form-fieldset__element label-box label-box_checkbox">
                      <input class="visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-                     <span class="additional__descr form-description">витамины</span>
+                     <span class="form-description">витамины</span>
                   </label>
                </fieldset>
 

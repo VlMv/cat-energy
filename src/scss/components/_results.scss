@@ -220,6 +220,11 @@
       border: 1px solid var(--clr-border-medium-grey);
       border-radius: 6px;
 
+      &:focus-visible {
+         outline: 2px solid var(--clr-text-medium-grey);
+         outline-offset: 5px;
+      }
+
       &::before {
          --central-gap: 1px;
 
@@ -242,6 +247,11 @@
 
    &__range-slider {
       display: none;
+
+      &:focus-visible {
+         outline: 2px solid var(--clr-text-medium-grey);
+         outline-offset: 15px;
+      }
 
       @include media-630 {
          display: block;

@@ -29,10 +29,6 @@
       border: none;
    }
 
-   & label {
-      display: block;
-   }
-
    &__pet {}
 
    &__programm-type {}
@@ -46,18 +42,45 @@
    &__btn-wrap {}
 }
 
+.form-inner {}
+
+.form-fieldset {
+   &__element {}
+
+   &__legend {}
+
+   &__textarea {}
+}
+
 .form-legend {
+   // 26px/320 - 36px/720
+   --line-h: clamp(1.625rem, 1.179rem + 2.23vw, 2.25rem);
+
    position: relative;
-   padding-right: clamp(1.375rem, 0.661rem + 3.57vw, 2.375rem);
-   background-color: #fff;
+   color: var(--clr-black);
+
+   // 24px/320 - 36px/720
+   font-size: clamp(1.5rem, 0.964rem + 2.68vw, 2.25rem);
+   font-family: var(--font-oswald);
+   line-height: var(--line-h);
+   background-color: var(--clr-white);
    transform-style: preserve-3d;
+   padding-inline: 0;
 
    &_green-line {
+      // 205px/320 - 245px/768
+      // ...a "magic number" just to keep the green-line right next to a text content
+      max-width: clamp(12.813rem, 8.91rem + 19.51vw, 15.313rem);
+      padding-right: 20px;
+
+      @include media-525 {
+         max-width: none;
+      }
 
       &::before,
       &::after {
          position: absolute;
-         top: 50%;
+         top: calc(var(--line-h) / 1.6); // 1.6 - capital / x-height ratio
          left: 0;
          height: 2px;
          background-color: var(--clr-basic-green);
@@ -66,7 +89,7 @@
       }
 
       &::before {
-         right: calc(100% + var(--_right-offset, 20px));
+         right: calc(100% + var(--_right-offset, 30px));
 
          @include media-500 {
             left: -10vw;
