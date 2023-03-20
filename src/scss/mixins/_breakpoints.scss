@@ -22,8 +22,20 @@
    }
 }
 
+@mixin media-525 {
+   @media (min-width: 525px) {
+      @content;
+   }
+}
+
 @mixin media-500 {
    @media (min-width: 500px) {
+      @content;
+   }
+}
+
+@mixin media-375 {
+   @media (min-width: 375px) {
       @content;
    }
 }

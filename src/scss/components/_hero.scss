@@ -2,23 +2,37 @@
    display: flex;
    flex-direction: column;
    justify-content: start;
-
-   // 37px/320 - 61px/768
-   padding-top: clamp(1.688rem, 0.17rem + 7.59vw, 3.813rem);
-
-   // 20px/320 - 117px/768
-   padding-left: clamp(1.25rem, -3.036rem + 21.43vw, 7.25rem);
+   padding-top: clamp(1.688rem, 0.17rem + 7.59vw, 3.813rem); // 37px/320 - 61px/768
+   padding-left: clamp(1.25rem, -3.036rem + 21.43vw, 7.25rem); // 20px/320 - 117px/768
    background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, url(@img/background/cat-hero-mobile.jpg) 65% top / auto 302px no-repeat;
    isolation: isolate;
 
    @include media-500 {
       margin-bottom: -57px;
-      background: var(--clr-white);
+      background: transparent;
    }
 
    @include media-768 {
-      // 117px/768 - 190px/1440
-      padding-left: clamp(7.313rem, 2.098rem + 10.86vw, 11.875rem);
+      padding-top: clamp(3.813rem, 0.598rem + 6.7vw, 6.625rem); // 61px/768 - 111px/1440
+      padding-left: clamp(7.313rem, 2.098rem + 10.86vw, 11.875rem); // 117px/768 - 190px/1440
+   }
+
+   @include media-1024 {
+      position: relative;
+      min-height: 576px;
+      margin-bottom: 0;
+      isolation: auto;
+
+      &::after {
+         position: absolute;
+         top: -118px;
+         right: 0;
+         z-index: -10;
+         width: clamp(33.75rem, 6.058rem + 43.27vw, 45rem); // 540px/1024 - 720px/ 1440
+         height: clamp(38.75rem, 27.365rem + 17.79vw, 43.375rem); // 520px/1024 - 720px/ 1440
+         background: linear-gradient(var(--clr-green-transparent) 0 0) center no-repeat, url(@img/background/cat-hero-desktop.jpg) 0 center / auto 100% no-repeat;
+         content: "";
+      }
    }
 
    &__title {
@@ -34,13 +48,9 @@
    &__slogan {
       margin-bottom: 30px;
       color: var(--clr-white);
-
-      // 14px/320 - 20px/768
-      font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem);
+      font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem); // 14px/320 - 20px/768
       font-family: var(--font-oswald);
-
-      // 14px/320 - 20px/768
-      line-height: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem);
+      line-height: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem); // 14px/320 - 20px/768
       text-align: center;
       text-transform: uppercase;
 
@@ -50,6 +60,10 @@
          color: var(--clr-black);
          text-align: left;
       }
+
+      @include media-1024 {
+         margin-bottom: 52px;
+      }
    }
 
    &>picture {
@@ -58,6 +72,15 @@
          order: 4;
          width: 100%;
          transform: translate(-4%, -63px) scale(1.07);
+      }
+
+      @include media-1024 {
+         position: absolute;
+         left: 42%;
+         z-index: -1;
+         max-width: 500px;
+         max-height: 500px;
+         transform: translate(-4%, -60px) scale(1.1);
       }
    }
 

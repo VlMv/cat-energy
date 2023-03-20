@@ -2,8 +2,17 @@
    padding-block: 27px 42px;
 
    @include media-630 {
-      padding-block: 45px 42px;
-      margin-bottom: 1px solid var(--clr-border-medium-grey);
+      padding-block: 45px 6px;
+      border-bottom: 1px solid var(--clr-border-medium-grey);
+   }
+
+   @include media-1024 {
+      padding-block: 71px;
+      border-bottom-color: transparent;
+   }
+
+   @include media-1440 {
+      padding-bottom: 0;
    }
 
    &__title {
@@ -22,13 +31,8 @@
       display: grid;
       grid-auto-rows: 1fr;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      column-gap: 70px;
+      column-gap: 60px;
       row-gap: 37px;
-   }
-
-   @include media-768 {
-      padding-right: 70px;
-      column-gap: 130px;
    }
 
    @include media-1024 {
@@ -60,6 +64,10 @@
          width: 250px;
          min-height: 280px;
          counter-increment: item-number;
+      }
+
+      @include media-1024 {
+         min-height: 252px;
       }
 
       &::before {
