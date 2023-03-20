@@ -9,13 +9,10 @@
 .service-list {
    display: grid;
    grid-auto-rows: 1fr;
-
-   // 20px/320 - 30px/768
-   gap: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
+   gap: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem); // 20px/320 - 30px/768
 
    @include media-768 {
-      // 30px/768 - 80px/1440
-      gap: clamp(1.875rem, -1.696rem + 7.44vw, 5rem);
+      gap: clamp(1.875rem, -1.696rem + 7.44vw, 5rem); // 30px/768 - 80px/1440
    }
 
    @include media-1024 {
@@ -121,9 +118,7 @@
          @include media-1024 {
             --_w: 100px;
             --_h: 106px;
-
-            // 53px/1024 - 62px/1440
-            --_margin: clamp(3.313rem, 1.928rem + 2.16vw, 3.875rem);
+            --_margin: clamp(3.313rem, 1.928rem + 2.16vw, 3.875rem); // 53px/1024 - 62px/1440
          }
       }
 
@@ -151,12 +146,8 @@
       padding-top: 19px;
       color: var(--clr-black);
       font-weight: 400;
-
-      // 16px/320 - 20px/768
-      font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem);
-
-      // 16px/320 - 30px/768
-      line-height: clamp(1rem, 0.375rem + 3.13vw, 1.875rem);
+      font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem); // 16px/320 - 20px/768
+      line-height: clamp(1rem, 0.375rem + 3.13vw, 1.875rem); // 16px/320 - 30px/768
       text-align: left;
       border-top: 1px solid var(--clr-border-medium-grey);
 

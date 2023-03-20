@@ -193,12 +193,8 @@
 
       @include media-768 {
          font-weight: 400;
-
-         // 18px/768 - 20px/1440
-         font-size: clamp(1.125rem, 0.982rem + 0.3vw, 1.25rem);
-
-         // 20px/768 - 30px/1440
-         line-height: clamp(1.25rem, 0.536rem + 1.49vw, 1.875rem);
+         font-size: clamp(1.125rem, 0.982rem + 0.3vw, 1.25rem); // 18px/768 - 20px/1440
+         line-height: clamp(1.25rem, 0.536rem + 1.49vw, 1.875rem); // 20px/768 - 30px/1440
          border-top: none;
          padding-block: 12px;
 

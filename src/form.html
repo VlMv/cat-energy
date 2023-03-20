@@ -28,84 +28,86 @@
                   <fieldset class="page-form__pet form-fieldset">
                      <legend class="visually-hidden">данные вашего питомца</legend>
                      <label class="form-fieldset__element label-box">
-                        <span class="form-description">имя:*</span>
+                        <span class="form-description">имя:*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
                         <input class="label-box__input" type="text" name="pet-name" id="pet-name" required placeholder="барсик">
                      </label>
                      <label class="form-fieldset__element label-box">
-                        <span class="form-description">вес (кг):*</span>
+                        <span class="form-description">вес (кг):*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
                         <input class="label-box__input" type="number" step="0.1" name="pet-weight" id="pet-weight" placeholder="7" required>
                      </label>
                      <label class="form-fieldset__element label-box">
-                        <span class="form-description">возраст (лет):*</span>
+                        <span class="form-description label-box__descr">возраст (лет):*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
                         <input class="label-box__input" type="number" step="0.1" name="pet-age" id="pet-age" placeholder="7" required>
                      </label>
                   </fieldset>
 
-                  <fieldset class="page-form__programm-type form-fieldset">
+                  <fieldset class="page-form__programm-type form-fieldset form-fieldset_border">
                      <legend class="visually-hidden">выбор программы питания</legend>
-                     <label class="form-fieldset__element label-box label-box_radio">
+                     <label class="form-fieldset__element">
                         <input class="visually-hidden" type="radio" name="feed-programm" id="weight-loss" value="weight-loss" checked>
-                        <span class="form-description">похудение</span>
+                        <span class="form-description form-description_black label-box label-box_radio">похудение</span>
                      </label>
-                     <label class="form-fieldset__element label-box label-box_radio">
+                     <label class="form-fieldset__element">
                         <input class="visually-hidden" type="radio" name="feed-programm" id="weight-gain" value="weight-gain">
-                        <span class="form-description">набор массы</span>
+                        <span class="form-description form-description_black label-box label-box_radio">набор массы</span>
                      </label>
-                     <label class="form-fieldset__element label-box label-box_radio">
+                     <label class="form-fieldset__element">
                         <input class="visually-hidden" type="radio" name="feed-programm" id="weight-consultation" value="weight-consultation">
-                        <span class="form-description">не знаю (Нужен ваш совет)</span>
+                        <span class="form-description form-description_black label-box label-box_radio">не знаю (Нужен ваш совет)</span>
                      </label>
                   </fieldset>
                </div>
 
-               <fieldset class="page-form__form-contacts form-fieldset">
+               <fieldset class="page-form__form-contacts form-fieldset form-fieldset_grid-fixed">
                   <legend class="form-fieldset__legend form-legend form-legend_green-line">Контактные данные (владельца кота)</legend>
                   <label class="form-fieldset__element label-box">
-                     <span class="form-description">e-mail:*</span>
-                     <input class="label-box__input" type="email" name="owner-mail" id="owner-mail" required placeholder="kuklachev@gmail.com">
+                     <span class="form-description">e-mail:*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
+                     <input class="label-box__input label-box__input_mail" type="email" name="owner-mail" id="owner-mail" required placeholder="kuklachev@gmail.com">
                   </label>
                   <label class="form-fieldset__element label-box">
-                     <span class="form-description">телефон:*</span>
-                     <input class="label-box__input" type="tel" name="owner-tel" id="owner-tel" required pattern="[0-9]{11}" placeholder="8 (960) 900-60-90" maxlength="11">
+                     <span class="form-description">телефон:*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
+                     <input class="label-box__input label-box__input_phone" type="tel" name="owner-tel" id="owner-tel" required pattern="[0-9]{11}" placeholder="8 (960) 900-60-90" maxlength="11">
                   </label>
                </fieldset>
 
-               <fieldset class="page-form__comment form-fieldset__element">
+               <fieldset class="page-form__comment form-fieldset">
                   <legend class="form-fieldset__legend form-legend form-legend_green-line">Комментарий</legend>
                   <label for="comment" class="visually-hidden">текстовое поле для комментария</label>
                   <textarea class="form-fieldset__textarea textarea" name="comment" id="comment" cols="30" rows="20" maxlength="500" placeholder="расскажите обо всех повадках кота"></textarea>
                </fieldset>
 
-               <fieldset class="page-form__additional form-fieldset__element">
+               <fieldset class="page-form__additional form-fieldset form-fieldset_narrow-gap form-fieldset_grid-auto">
                   <legend class="form-fieldset__legend form-legend form-legend_green-line">Дополнительно</legend>
-                  <label class="form-fieldset__element label-box label-box_checkbox">
+                  <label class="form-fieldset__element">
                      <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
-                     <span class="form-description">сахарозаменитель</span>
+                     <span class="form-description form-description_black label-box label-box_checkbox">сахарозаменитель</span>
                   </label>
-                  <label class="form-fieldset__element label-box label-box_checkbox">
+                  <label class="form-fieldset__element">
                      <input class="visually-hidden" type="checkbox" name="water" id="water">
-                     <span class="form-description">питьевая вода</span>
+                     <span class="form-description form-description_black label-box label-box_checkbox">питьевая вода</span>
                   </label>
-                  <label class="form-fieldset__element label-box label-box_checkbox">
+                  <label class="form-fieldset__element">
                      <input class="visually-hidden" type="checkbox" name="milk" id="milk">
-                     <span class="form-description">молоко</span>
+                     <span class="form-description form-description_black label-box label-box_checkbox">молоко</span>
                   </label>
-                  <label class="form-fieldset__element label-box label-box_checkbox">
+                  <label class="form-fieldset__element">
                      <input class="visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-                     <span class="form-description">витамины</span>
+                     <span class="form-description form-description_black label-box label-box_checkbox">витамины</span>
                   </label>
                </fieldset>
 
                <div class="page-form__btn-wrap btn-wrap">
-                  <button class="btn-wrap__btn btn btn_green-box" type="submit"><span>отправить заявку</span></button>
-                  <span class="btn-wrap__text-required">* — Обязательные поля</span>
+                  <button class="btn-wrap__btn btn btn_green-box" type="submit" aria-label="Отправить заявку на подбор программы"><span aria-hidden="true">отправить заявку</span></button>
+                  <div class="btn-wrap__text-required" aria-hidden="true">* — Обязательные поля</div>
                </div>
 
             </form>
          </section>
       </main>
 
-      @@include('html/footer.html')
+      @@include('html/footer.html', {
+      "grey-bg":"contacts_grey-bg"
+      })
    </div>
 </body>
 

@@ -14,6 +14,10 @@
    position: relative;
    isolation: isolate;
 
+   &_grey-bg {
+      background-color: var(--clr-basic-grey);
+   }
+
    @include media-1024 {
       min-height: 400px;
       padding-top: 95px;
@@ -23,9 +27,7 @@
    &__address-box {
       display: flex;
       margin-bottom: 26px;
-
-      // 20px/320 - 71px/768
-      padding-inline: clamp(1.25rem, -1.027rem + 11.38vw, 4.438rem);
+      padding-inline: clamp(1.25rem, -1.027rem + 11.38vw, 4.438rem); // 20px/320 - 71px/768
 
       @include media-500 {
          align-items: center;
@@ -46,13 +48,9 @@
       min-width: 140px;
       max-width: 16ch;
       color: var(--clr-text-dark);
-
-      // 16px/320 - 20px/768
-      font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem);
+      font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem); // 16px/320 - 20px/768
       font-family: var(--font-oswald);
-
-      // 18px/320 - 26px/768
-      line-height: clamp(1.125rem, 0.768rem + 1.79vw, 1.625rem);
+      line-height: clamp(1.125rem, 0.768rem + 1.79vw, 1.625rem); // 18px/320 - 26px/768
       text-transform: uppercase;
    }
 

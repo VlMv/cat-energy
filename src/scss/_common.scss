@@ -25,17 +25,14 @@ html {
    padding-inline: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
 
    @include media-768 {
-      // 30px/768 - 110px/1440
-      padding-inline: clamp(1.875rem, -3.839rem + 11.9vw, 6.875rem);
+      padding-inline: clamp(1.875rem, -3.839rem + 11.9vw, 6.875rem); // 30px/768 - 110px/1440
    }
 
    &_form {
-      // 20px/320 - 70px/768
-      padding-inline: clamp(1.25rem, -0.982rem + 11.16vw, 4.375rem);
+      padding-inline: clamp(1.25rem, -0.982rem + 11.16vw, 4.375rem); // 20px/320 - 70px/768
 
       @include media-768 {
-         // 70px/768 - 110px/1440
-         padding-inline: clamp(4.375rem, 1.518rem + 5.95vw, 6.875rem);
+         padding-inline: clamp(4.375rem, 1.518rem + 5.95vw, 6.875rem); // 70px/768 - 110px/1440
       }
    }
 }
@@ -79,12 +76,8 @@ html {
 
    &_big-font {
       padding: 11px 26px;
-
-      // 14px/320 - 20px/768
-      font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem);
-
-      // 18px/320 - 20px/768
-      line-height: clamp(1.125rem, 1.036rem + 0.45vw, 1.25rem);
+      font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem); // 14px/320 - 20px/768
+      line-height: clamp(1.125rem, 1.036rem + 0.45vw, 1.25rem); // 18px/320 - 20px/768
    }
 
    &_white {
@@ -97,13 +90,9 @@ html {
 .page-title {
    color: var(--clr-black);
    font-weight: 400;
-
-   // 36px/320 - 60px/768
-   font-size: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem);
+   font-size: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem); // 36px/320 - 60px/768
    font-family: var(--font-oswald);
-
-   // 36px/320 - 60px/768
-   line-height: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem);
+   line-height: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem); // 36px/320 - 60px/768
 
    &_white {
       color: var(--clr-white);
@@ -119,9 +108,7 @@ html {
 .subtitle {
    color: var(--clr-black);
    font-weight: 400;
-
-   // 24px/320 - 36px/768
-   font-size: clamp(1.5rem, 0.964rem + 2.68vw, 2.25rem);
+   font-size: clamp(1.5rem, 0.964rem + 2.68vw, 2.25rem); // 24px/320 - 36px/768
    font-family: var(--font-oswald);
    line-height: 37px;
    text-transform: uppercase;
@@ -130,30 +117,22 @@ html {
 .text {
    color: var(--clr-text-medium-grey);
    font-weight: 400;
-
-   // 14px/320 - 16px/768
-   font-size: clamp(0.875rem, 0.786rem + 0.45vw, 1rem);
+   font-size: clamp(0.875rem, 0.786rem + 0.45vw, 1rem); // 14px/320 - 16px/768
    font-family: Arial, sans-serif;
    font-style: normal;
-
-   // 18px/320 - 24px/768
-   line-height: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem);
+   line-height: clamp(1.125rem, 0.857rem + 1.34vw, 1.5rem); // 18px/320 - 24px/768
 }
 
 .title {
    color: var(--clr-black);
    font-weight: 400;
-
-   // 36px/320 - 60px/768
-   font-size: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem);
+   font-size: clamp(2.25rem, 1.179rem + 5.36vw, 3.75rem); // 36px/320 - 60px/768
    font-family: var(--font-oswald);
-
-   // 40px/320 - 60px/768
-   line-height: clamp(2.5rem, 1.607rem + 4.46vw, 3.75rem);
+   line-height: clamp(2.5rem, 1.607rem + 4.46vw, 3.75rem); // 40px/320 - 60px/768
 }
 
 .label-box {
-   --width: 30px;
+   --width: clamp(1.875rem, 1.429rem + 2.23vw, 2.5rem); // 30px/320 - 40px/768
    --gap: 16px;
    --pseudo-elem-border: 1px solid var(--clr-border-medium-grey);
 
@@ -162,11 +141,16 @@ html {
    align-items: center;
    justify-content: start;
 
+   &:has(.label-box__descr) {
+      --gap: 9px;
+   }
+
    &_radio {
-      --active-img: radial-gradient(at center, var(--clr-basic-green) 7px, #0000 0);
+      --clr-stop: clamp(0.438rem, 0.348rem + 0.45vw, 0.563rem); // 7px/320 - 9px/768
 
       &::before {
          width: var(--width);
+         background-image: var(--active-img);
          background-repeat: no-repeat;
          background-position: center;
          border: var(--pseudo-elem-border);
@@ -177,10 +161,9 @@ html {
    }
 
    &_checkbox {
-      --active-img: url("@img/icons/icons.svg#check-mark");
-
       &::before {
          width: var(--width);
+         background-image: var(--active-img);
          background-repeat: no-repeat;
          background-position: center;
          background-size: 18px;
@@ -198,22 +181,12 @@ html {
       }
    }
 
-   &:has(input:checked).label-box_radio::before,
-   &:has(input:checked).label-box_checkbox::before {
-      background-image: var(--active-img);
-   }
-
-   &:has(input:disabled) {
-      opacity: var(--opacity-action);
-   }
-
-   &:has(input[type="radio"]:focus-visible),
-   &:has(input[type="checkbox"]:focus-visible) {
-      outline: 2px solid var(--clr-text-medium-grey);
-      outline-offset: 2px;
+   &__descr {
+      min-width: 100px;
    }
 
    &__input {
+      position: relative;
       flex-grow: 1;
       height: 45px;
       padding: 14px;
@@ -222,12 +195,43 @@ html {
       font-size: var(--font-size-small);
       font-family: var(--font-oswald);
       line-height: var(--font-height-small);
+      background: var(--input-bg-img) right var(--bg-right-offset) center/ var(--bg-x-size) var(--bg-y-size) no-repeat;
       border: 1px solid var(--clr-border-light-grey);
       border-radius: 0;
       outline: none;
 
       @include media-768 {
          height: 52px;
+      }
+
+      &_mail {
+         --input-bg-img: url("@img/icons/icons.svg#mail");
+         --bg-x-size: 18px;
+         --bg-y-size: 13px;
+         --bg-right-offset: 16px;
+
+         &:invalid:not(:focus-visible, :placeholder-shown) {
+            --input-bg-img: url("@img/icons/icons.svg#mail-invalid");
+         }
+
+         &:valid:not(:focus-visible) {
+            --input-bg-img: url("@img/icons/icons.svg#mail-valid");
+         }
+      }
+
+      &_phone {
+         --input-bg-img: url("@img/icons/icons.svg#phone");
+         --bg-x-size: 20px;
+         --bg-y-size: 20px;
+         --bg-right-offset: 13px;
+
+         &:invalid:not(:focus-visible, :placeholder-shown) {
+            --input-bg-img: url("@img/icons/icons.svg#phone-invalid");
+         }
+
+         &:valid:not(:focus-visible) {
+            --input-bg-img: url("@img/icons/icons.svg#phone-valid");
+         }
       }
 
       &::placeholder {
@@ -260,7 +264,22 @@ html {
    }
 }
 
+input:checked+.label-box_radio {
+   --active-img: radial-gradient(at center, var(--clr-basic-green) var(--clr-stop), #0000 0);
+}
+
+input:checked+.label-box_checkbox {
+   --active-img: url("@img/icons/icons.svg#check-mark");
+}
+
+input:focus-visible+.label-box_radio,
+input:focus-visible+.label-box_checkbox {
+   outline: 2px solid var(--clr-text-medium-grey);
+   outline-offset: 2px;
+}
+
 .textarea {
+   position: relative;
    width: 100%;
    height: 150px;
    padding: 9px 12px;
@@ -302,6 +321,10 @@ html {
    font-family: var(--font-oswald);
    line-height: var(--font-height-small);
    text-transform: uppercase;
+
+   &_black {
+      color: var(--clr-text-dark-grey);
+   }
 }
 
 .btn {
@@ -317,13 +340,10 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 100%;
-      padding: 7px;
+      padding: 10px;
       color: var(--clr-white);
       font-size: var(--font-size-small);
-
-      // 20px/320 - 30px/768
-      line-height: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
+      line-height: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem); // 20px/320 - 30px/768
       background-color: var(--clr-basic-green);
 
       @include hover {

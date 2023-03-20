@@ -169,13 +169,9 @@
 
    & span {
       color: var(--clr-black);
-
-      // 16px/320 - 20px/768
-      font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem);
+      font-size: clamp(1rem, 0.821rem + 0.89vw, 1.25rem); // 16px/320 - 20px/768
       font-family: var(--font-oswald);
-
-      // 20px/320 - 30px/768
-      line-height: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem);
+      line-height: clamp(1.25rem, 0.804rem + 2.23vw, 1.875rem); // 20px/320 - 30px/768
       text-transform: uppercase;
    }
 
