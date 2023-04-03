@@ -203,6 +203,10 @@
    }
 
    &__element {
+      @include media-1024 {
+         display: flex;
+         align-items: center;
+      }
       &:has(input:disabled) {
          opacity: var(--opacity-action);
       }
@@ -279,6 +283,7 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      row-gap: 20px;
    }
 
    &__btn {
