@@ -1,30 +1,11 @@
-.catalog-main {
-   @include media-768 {
-      padding-top: 35px;
-   }
-
-   @include media-1440 {
-      padding-top: 43px;
-   }
-
-   &__title {
-      margin-bottom: 39px;
-
-      @include media-768 {
-         margin-bottom: 79px;
-      }
-   }
-}
-
 .food-catalog {
-   margin-bottom: 25px;
 
    &__list {}
 }
 
 .food-list {
    display: grid;
-   gap: clamp(1.438rem, 0.116rem + 6.92vw, 3.438rem); // 24px/320 - 55px/768
+   gap: clamp(1.5rem, 0.116rem + 6.92vw, 3.438rem); // 24px/320 - 55px/768
 
    @include media-594 {
       grid-auto-rows: 1fr;
@@ -32,7 +13,11 @@
    }
 
    @include media-768 {
-      column-gap: clamp(3.75rem, 2.321rem + 2.98vw, 5rem); // 60px/768 - 80px/1440
+      column-gap: clamp(3.438rem, 1.652rem + 3.72vw, 5rem); // 55px/768 - 80px/1440
+   }
+
+   @include media-1440 {
+      row-gap: 60px;
    }
 
    &__item {
