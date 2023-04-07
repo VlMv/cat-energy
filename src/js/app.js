@@ -49,19 +49,19 @@ burger.addEventListener('click', function () {
 
 // cat's shape slider/btn
 const catShapeToogleBtn = document.querySelector(".cat-img-controls__btn");
-const catSkinny = document.querySelector(".results__img_skinny");
-const catFat = document.querySelector(".results__img_fat");
+const catSkinnyImg = document.querySelector(".results__img_skinny");
+const catFatImg = document.querySelector(".results__img_fat");
 const catShapeRangeSlider = document.querySelector(".cat-img-controls__range-slider");
 
 if (catShapeToogleBtn) {
    catShapeToogleBtn.addEventListener('click', function () {
-      if (!catSkinny.style.getPropertyValue("--_opacity")) {
-         catSkinny.style.setProperty("--_opacity", "1");
-         catFat.style.setProperty("--_opacity", "0");
+      if (!catSkinnyImg.style.getPropertyValue("--_opacity")) {
+         catSkinnyImg.style.setProperty("--_opacity", "1");
+         catFatImg.style.setProperty("--_opacity", "0");
          catShapeToogleBtn.style.setProperty("--_active", "1");
       } else {
-         catSkinny.removeAttribute('style');
-         catFat.removeAttribute('style');
+         catSkinnyImg.removeAttribute('style');
+         catFatImg.removeAttribute('style');
          catShapeToogleBtn.removeAttribute('style');
       }
    });
@@ -72,8 +72,8 @@ if (catShapeRangeSlider) {
       let rangeSliderValue = catShapeRangeSlider.value;
       let maskWidthCatFat = 100 - rangeSliderValue;
 
-      catFat.style.setProperty("--_mask-width", ' ' + maskWidthCatFat + '%');
-      catSkinny.style.setProperty("--_mask-width", ' ' + rangeSliderValue + '%');
+      catFatImg.style.setProperty("--_mask-width", ' ' + maskWidthCatFat + '%');
+      catSkinnyImg.style.setProperty("--_mask-width", ' ' + rangeSliderValue + '%');
    };
 }
 

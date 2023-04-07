@@ -8,6 +8,10 @@ html {
 
    &__header {
       margin-bottom: 27px;
+
+      @media (max-width: 500px) {
+         border-bottom: 1px solid var(--clr-border-socials);
+      }
    }
 }
 
@@ -17,7 +21,7 @@ html {
    max-width: 1440px;
    min-height: 100vh;
    margin-inline: auto;
-   overflow: hidden;
+   overflow-x: hidden;
 }
 
 .pad-wrapper {
@@ -73,11 +77,41 @@ html {
          opacity: var(--opacity-action);
       }
    }
+      &_grey-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      color: var(--clr-text-medium-grey);
+      font-size: 16px;
+      font-family: var(--font-oswald);
+      line-height: 20px;
+      background-color: var(--clr-basic-grey);
+
+      @include hover {
+         &:hover {
+            background-color: var(--clr-border-light-grey);
+         }
+      }
+
+      &:active {
+         background-color: var(--clr-border-light-grey);
+      }
+
+      &:active span {
+         opacity: var(--opacity-action);
+      }
+   }
+
 
    &_big-font {
       padding: 11px 26px;
       font-size: clamp(0.875rem, 0.607rem + 1.34vw, 1.25rem); // 14px/320 - 20px/768
       line-height: clamp(1.125rem, 1.036rem + 0.45vw, 1.25rem); // 18px/320 - 20px/768
+   }
+
+   &_big-padding {
+      padding: 10px 26px;
    }
 
    &_white {
@@ -149,7 +183,7 @@ html {
       --clr-stop: clamp(0.438rem, 0.348rem + 0.45vw, 0.563rem); // 7px/320 - 9px/768
 
       &::before {
-         width: var(--width);
+         min-width: var(--width);
          background-image: var(--active-img);
          background-repeat: no-repeat;
          background-position: center;
