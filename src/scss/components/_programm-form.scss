@@ -207,6 +207,7 @@
          display: flex;
          align-items: center;
       }
+
       &:has(input:disabled) {
          opacity: var(--opacity-action);
       }
@@ -239,7 +240,7 @@
       // 205px/320 - 245px/768
       // ...a "magic number" just to keep the green-line right next to a text content
       max-width: clamp(12.813rem, 8.91rem + 19.51vw, 15.313rem);
-      padding-right: 20px;
+      padding-right: clamp(1.25rem, 0.357rem + 4.46vw, 2.5rem); // 20px/320 - 40px/768
 
       @include media-525 {
          max-width: none;
