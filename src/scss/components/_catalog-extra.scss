@@ -81,6 +81,8 @@
    }
 
    &__gift {
+      --bg-gift-img: url("@img/background/gift-cat-mobile.jpg");
+
       display: flex;
       flex-direction: column;
       gap: 48px;
@@ -94,12 +96,20 @@
       line-height: 20px;
       text-align: center;
       background-color: var(--clr-basic-green);
-      background-image: url("@img/background/gift-cat-mobile.jpg");
+      background-image: var(--bg-gift-img);
       background-repeat: no-repeat;
       background-size: cover;
 
+      @media (min-resolution: 2dppx) {
+         --bg-gift-img: url("@img/background/gift-cat-mobile@2x.jpg");
+      }
+
       @include media-500 {
-         background-image: url("@img/background/gift-cat-tablet.jpg");
+         --bg-gift-img: url("@img/background/gift-cat-tablet.jpg");
+      }
+
+      @media (min-resolution: 2dppx) and (min-width: 500px) {
+         --bg-gift-img: url("@img/background/gift-cat-tablet@2x.jpg");
       }
 
       @media (min-width: 500px) and (max-width: 799px) {
@@ -111,9 +121,14 @@
       }
 
       @include media-1440 {
+         --bg-gift-img: url("@img/background/gift-cat-desktop.jpg");
+
          height: 289px;
-         background-image: url("@img/background/gift-cat-desktop.jpg");
          padding-inline: 30px;
+      }
+
+      @media (min-resolution: 2dppx) and (min-width: 1440px) {
+         --bg-gift-img: url("@img/background/gift-cat-desktop@2x.jpg");
       }
 
       &::before {

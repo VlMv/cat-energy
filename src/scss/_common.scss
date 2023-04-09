@@ -77,7 +77,8 @@ html {
          opacity: var(--opacity-action);
       }
    }
-      &_grey-box {
+
+   &_grey-box {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -102,7 +103,6 @@ html {
          opacity: var(--opacity-action);
       }
    }
-
 
    &_big-font {
       padding: 11px 26px;

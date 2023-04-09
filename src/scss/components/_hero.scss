@@ -1,11 +1,17 @@
 .hero {
+   --bg-hero-img: url(@img/background/cat-hero-mobile.jpg);
+
    display: flex;
    flex-direction: column;
    justify-content: start;
    padding-top: clamp(1.688rem, 0.17rem + 7.59vw, 3.813rem); // 37px/320 - 61px/768
    padding-left: clamp(1.25rem, -3.036rem + 21.43vw, 7.25rem); // 20px/320 - 117px/768
-   background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, url(@img/background/cat-hero-mobile.jpg) 65% top / auto 302px no-repeat;
+   background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, var(--bg-hero-img) 65% top / auto 302px no-repeat;
    isolation: isolate;
+
+   @media (min-resolution: 2dppx) {
+      --bg-hero-img: url(@img/background/cat-hero-mobile@2x.jpg);
+   }
 
    @include media-500 {
       margin-bottom: -57px;
@@ -18,6 +24,8 @@
    }
 
    @include media-1024 {
+      --bg-hero-img: url(@img/background/cat-hero-desktop.jpg);
+
       position: relative;
       min-height: 576px;
       margin-bottom: 0;
@@ -30,9 +38,13 @@
          z-index: -10;
          width: clamp(33.75rem, 6.058rem + 43.27vw, 45rem); // 540px/1024 - 720px/ 1440
          height: clamp(38.75rem, 27.365rem + 17.79vw, 43.375rem); // 520px/1024 - 720px/ 1440
-         background: linear-gradient(var(--clr-green-transparent) 0 0) center no-repeat, url(@img/background/cat-hero-desktop.jpg) 0 center / auto 100% no-repeat;
+         background: linear-gradient(var(--clr-green-transparent) 0 0) center no-repeat, var(--bg-hero-img) 0 center / auto 100% no-repeat;
          content: "";
       }
+   }
+
+   @media (min-resolution: 2dppx) and (min-width: 1024px) {
+      --bg-hero-img: url(@img/background/cat-hero-desktop@2x.jpg);
    }
 
    &__title {
