@@ -338,29 +338,33 @@
    }
 
    &__element {
+      --font-descr-size: 14px;
+
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       width: var(--width);
       height: 100%;
-      padding-inline: 10px;
+      min-height: 72px;
       padding-top: var(--_padding, 14px);
       isolation: isolate;
+      padding-inline: 10px;
 
       &::after {
          position: absolute;
          top: 0;
-         bottom: 20%;
+         bottom: var(--font-descr-size);
+         left: 0;
          z-index: -1;
          width: var(--width);
-         min-height: 56px;
          border: 1px solid var(--clr-border-medium-grey);
          border-radius: 3px;
          content: "";
 
-         @include media-768 {
-            min-height: 72px;
+         @include media-630 {
+            bottom: calc(var(--font-descr-size) * 0.5);
          }
       }
 
@@ -368,6 +372,7 @@
          flex-direction: row;
          justify-self: center;
          min-width: fit-content;
+         min-height: auto;
          padding: 0;
          column-gap: 3px;
 
@@ -398,7 +403,7 @@
 
       @include media-768 {
          --_font-num-size: 30px;
-         --_font-descr-size: 14px;
+         --font-descr-size: 14px;
          --_padding: 19px;
       }
    }
@@ -406,7 +411,6 @@
    &__num {
       --margin: 9px;
 
-      margin-top: auto;
       margin-bottom: var(--margin);
       color: var(--clr-black);
       font-size: var(--_font-num-size, 24px);
@@ -428,17 +432,16 @@
       --padding: 15px;
 
       max-width: min-content;
-      margin-top: auto;
       color: var(--clr-text-medium-grey);
-      font-size: var(--_font-descr-size, 12px);
+      font-size: var(--font-descr-size);
       font-family: Arial, sans-serif;
-      line-height: var(--_font-descr-size, 12px);
+      line-height: var(--font-descr-size);
       text-align: center;
       background-color: var(--clr-basic-medium-grey);
       padding-inline: var(--padding);
 
       @include media-630 {
-         --padding: 7px;
+         --padding: 6px;
 
          max-width: max-content;
       }
