@@ -107,19 +107,19 @@
       }
 
       &_leaf {
-         --icon: url(@img/icons/icons.svg#leaf-icon);
+         --icon: url("@img/icons/icons.svg#leaf-icon");
       }
 
       &_boiling {
-         --icon: url(@img/icons/icons.svg#boiling-water-icon);
+         --icon: url("@img/icons/icons.svg#boiling-water-icon");
       }
 
       &_cutlery {
-         --icon: url(@img/icons/icons.svg#cutlery-icon);
+         --icon: url("@img/icons/icons.svg#cutlery-icon");
       }
 
       &_clock {
-         --icon: url(@img/icons/icons.svg#clock-icon);
+         --icon: url("@img/icons/icons.svg#clock-icon");
       }
    }
 }
