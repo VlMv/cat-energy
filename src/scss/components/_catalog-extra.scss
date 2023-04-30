@@ -100,16 +100,24 @@
       background-repeat: no-repeat;
       background-size: cover;
 
-      @media (min-resolution: 2dppx) {
-         --bg-gift-img: url("@img/background/gift-cat-mobile@2x.jpg");
+      @media (max-width: 499px) {
+
+         @media (min-device-pixel-ratio: 2),
+         (min-resolution: 2dppx) {
+            --bg-gift-img: url("@img/background/gift-cat-mobile@2x.jpg");
+         }
       }
 
       @include media-500 {
          --bg-gift-img: url("@img/background/gift-cat-tablet.jpg");
-      }
 
-      @media (min-resolution: 2dppx) and (min-width: 500px) {
-         --bg-gift-img: url("@img/background/gift-cat-tablet@2x.jpg");
+         @media (max-width: 1399px) {
+
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 2dppx) {
+               --bg-gift-img: url("@img/background/gift-cat-tablet@2x.jpg");
+            }
+         }
       }
 
       @media (min-width: 500px) and (max-width: 799px) {
@@ -125,10 +133,11 @@
 
          height: 289px;
          padding-inline: 30px;
-      }
 
-      @media (min-resolution: 2dppx) and (min-width: 1440px) {
-         --bg-gift-img: url("@img/background/gift-cat-desktop@2x.jpg");
+         @media (min-device-pixel-ratio: 2),
+         (min-resolution: 2dppx) {
+            --bg-gift-img: url("@img/background/gift-cat-desktop@2x.jpg");
+         }
       }
 
       &::before {
