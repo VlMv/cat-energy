@@ -91,4 +91,3 @@ if (!supportsHasClass && fieldsetElements) {
    });
 }
 
-

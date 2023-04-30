@@ -78,6 +78,8 @@
    }
 
    &__map {
+      height: 362px;
+
       @include media-630 {
          height: 400px;
       }
@@ -90,6 +92,7 @@
 
       &>picture {
          z-index: -2;
+         display: block;
          width: 100%;
          height: inherit;
       }
@@ -106,7 +109,7 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding-top: 35px;
+   padding-top: 39px;
    padding-bottom: 22px;
    background-color: var(--clr-basic-grey);
 
