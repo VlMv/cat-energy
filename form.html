@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CAT ENERGY. Подбор программы питания</title>
+
+   <link rel="icon" href="favicon-32.ico">
+   <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+   <link rel="apple-touch-icon" href="img/favicon/favicon-apple-180.png">
+   <link rel="manifest" href="img/favicon/manifest.webmanifest">
+
+   <link rel="stylesheet" href="css/normalize.min.css?_v=20230430152827">
+   <link rel="stylesheet" href="css/style.min.css?_v=20230430152827">
+
+   <script src="js/app.min.js?_v=20230430152827" defer></script>
+</head>
+
+
+<body class="page-body">
+   <div class="page-wrapper">
+
+      <header class="page-header pad-wrapper page-body__header">
+   <a class="logo page-header__logo" href="index.html">
+      <picture>
+         <source media="(min-width: 1440px)" srcset="img/icons/icons.svg#logo-desktop" width="70" height="59">
+         <source media="(min-width: 768px)" srcset="img/icons/icons.svg#logo-tablet" width="60" height="49">
+         <img class="logo__img" src="img/icons/icons.svg#logo-mobile" alt="логотип cat energy" width="33" height="37">
+      </picture>
+      <img class="logo__title" src="img/icons/icons.svg#logo-title" alt="cat energy" aria-hidden="true" width="101" height="18">
+   </a>
+   <a class="page-header__logo_mobile" href="index.html" aria-label="на Главную страницу">
+      <img src="img/icons/icons.svg#logo-title-mobile" alt="cat energy" aria-hidden="true" width="101" height="18">
+   </a>
+   <button class="burger" type="button" aria-label="открыть меню" aria-expanded="false">
+      <span class="burger-bar" aria-hidden="true"></span>
+   </button>
+   <nav class="main-nav page-header__nav" aria-hidden="true">
+      <ul class="main-nav__list list-reset">
+         <li class="main-nav__item "><a class="link " href="index.html" aria-label="на Главную страницу">главная</a></li>
+         <li class="main-nav__item "><a class="link " href="catalog.html">каталог продукции</a></li>
+         <li class="main-nav__item main-nav__item_active"><a class="link " href="form.html" aria-label="подбор программы питания">подбор программы</a></li>
+      </ul>
+   </nav>
+</header>
+
+
+      <main class="form-main pad-wrapper_form">
+         <h1 class="form-main__title page-title" aria-label="подбор программы питания">Подбор программы</h1>
+         <section class="programm-form">
+            <header class="programm-form__header">
+               <h2 class="visually-hidden" aria-hidden="true">Анкета для подбора программы</h2>
+               <p class="programm-form__descr">Заполните анкету, и мы подберем<br>программу питания для вашего кота</p>
+            </header>
+
+            <form class="page-form programm-form__page-form" action="https://echo.htmlacademy.ru" method="post">
+
+               <div class="form-inner">
+                  <fieldset class="page-form__pet form-fieldset">
+                     <legend class="visually-hidden">данные вашего питомца</legend>
+                     <label class="form-fieldset__element label-box">
+                        <span class="form-description">имя:*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
+                        <input class="label-box__input" type="text" name="pet-name" id="pet-name" required placeholder="барсик">
+                     </label>
+                     <label class="form-fieldset__element label-box">
+                        <span class="form-description">вес (кг):*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
+                        <input class="label-box__input" type="number" step="0.1" name="pet-weight" id="pet-weight" placeholder="7" required>
+                     </label>
+                     <label class="form-fieldset__element label-box">
+                        <span class="form-description label-box__descr">возраст (лет):*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
+                        <input class="label-box__input" type="number" step="0.1" name="pet-age" id="pet-age" placeholder="7" required>
+                     </label>
+                  </fieldset>
+
+                  <fieldset class="page-form__programm-type form-fieldset form-fieldset_border">
+                     <legend class="visually-hidden">выбор программы питания</legend>
+                     <label class="form-fieldset__element">
+                        <input class="visually-hidden" type="radio" name="feed-programm" id="weight-loss" value="weight-loss" checked>
+                        <span class="form-description form-description_black label-box label-box_radio">похудение</span>
+                     </label>
+                     <label class="form-fieldset__element">
+                        <input class="visually-hidden" type="radio" name="feed-programm" id="weight-gain" value="weight-gain">
+                        <span class="form-description form-description_black label-box label-box_radio">набор массы</span>
+                     </label>
+                     <label class="form-fieldset__element">
+                        <input class="visually-hidden" type="radio" name="feed-programm" id="weight-consultation" value="weight-consultation">
+                        <span class="form-description form-description_black label-box label-box_radio">не знаю (Нужен ваш совет)</span>
+                     </label>
+                  </fieldset>
+               </div>
+
+               <fieldset class="page-form__form-contacts form-fieldset form-fieldset_grid-fixed">
+                  <legend class="form-fieldset__legend form-legend form-legend_green-line">Контактные данные (владельца кота)</legend>
+                  <label class="form-fieldset__element label-box">
+                     <span class="form-description">e-mail:*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
+                     <input class="label-box__input label-box__input_mail" type="email" name="owner-mail" id="owner-mail" required placeholder="kuklachev@gmail.com">
+                  </label>
+                  <label class="form-fieldset__element label-box">
+                     <span class="form-description">телефон:*<span class="visually-hidden">Обязательное к заполнению поле</span></span>
+                     <input class="label-box__input label-box__input_phone" type="tel" name="owner-tel" id="owner-tel" required pattern="[0-9]{11}" placeholder="8 (960) 900-60-90" maxlength="11">
+                  </label>
+               </fieldset>
+
+               <fieldset class="page-form__comment form-fieldset">
+                  <legend class="form-fieldset__legend form-legend form-legend_green-line">Комментарий</legend>
+                  <label for="comment" class="visually-hidden">текстовое поле для комментария</label>
+                  <textarea class="form-fieldset__textarea textarea" name="comment" id="comment" cols="30" rows="20" maxlength="500" placeholder="расскажите обо всех повадках кота"></textarea>
+               </fieldset>
+
+               <fieldset class="page-form__additional form-fieldset form-fieldset_narrow-gap form-fieldset_grid-auto">
+                  <legend class="form-fieldset__legend form-legend form-legend_green-line">Дополнительно</legend>
+                  <label class="form-fieldset__element">
+                     <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
+                     <span class="form-description form-description_black label-box label-box_checkbox">сахарозаменитель</span>
+                  </label>
+                  <label class="form-fieldset__element">
+                     <input class="visually-hidden" type="checkbox" name="water" id="water">
+                     <span class="form-description form-description_black label-box label-box_checkbox">питьевая вода</span>
+                  </label>
+                  <label class="form-fieldset__element">
+                     <input class="visually-hidden" type="checkbox" name="milk" id="milk">
+                     <span class="form-description form-description_black label-box label-box_checkbox">молоко</span>
+                  </label>
+                  <label class="form-fieldset__element">
+                     <input class="visually-hidden" type="checkbox" name="vitamins" id="vitamins">
+                     <span class="form-description form-description_black label-box label-box_checkbox">витамины</span>
+                  </label>
+               </fieldset>
+
+               <div class="page-form__btn-wrap btn-wrap">
+                  <button class="btn-wrap__btn btn btn_green-box" type="submit" aria-label="Отправить заявку на подбор программы"><span aria-hidden="true">отправить заявку</span></button>
+                  <div class="btn-wrap__text-required" aria-hidden="true">* — Обязательные поля</div>
+               </div>
+
+            </form>
+         </section>
+      </main>
+
+      <footer class="page-footer">
+   <div class="page-footer__contacts contacts contacts_grey-bg">
+      <div class="contacts__address-box">
+         <p class="contacts__text">приглашаем к&nbsp;сотрудничеству дилеров!</p>
+         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 <span>Санкт-Петербург</span></address>
+      </div>
+      <div class="contacts__map">
+         <picture>
+            <source media="(min-width: 1024px)" srcset="img/map-desktop.webp 1x, img/map-desktop@2x.webp 2x" width="1440" height="400" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="img/map-desktop.png 1x, img/map-desktop@2x.png 2x" width="1440" height="400" type="image/png">
+
+            <source media="(min-width: 630px)" srcset="img/map-tablet.webp 1x, img/map-tablet@2x.webp 2x" width="768" height="400" type="image/webp">
+            <source media="(min-width: 630px)" srcset="img/map-tablet.png 1x, img/map-tablet@2x.png 2x" width="768" height="400" type="image/png">
+
+            <source srcset="img/map-mobile.webp 1x, img/map-mobile@2x.webp 2x" type="image/webp">
+            <img class="contacts__map-img" src="img/map-mobile.png" srcset="img/map-mobile.png 1x, img/map-mobile@2x.png 2x" alt="адрес офиса на карте города Санкт-Петербург" width="320" height="362">
+         </picture>
+      </div>
+   </div>
+   <div class="page-footer__socials-box socials-box pad-wrapper">
+      <a class="socials-box__logo logo-title" href="index.html">
+         <img class="logo-title__img" src="img/icons/icons.svg#logo-title" alt="cat energy логотип" width="128" height="24">
+      </a>
+      <ul class="socials-box__socials-list socials-list list-reset">
+         <li class="socials-list__item socials-list__item_vk">
+            <a href="#"><span class="visually-hidden">наша страница вконтакте</span></a>
+         </li>
+         <li class="socials-list__item socials-list__item_inst">
+            <a href="#"><span class="visually-hidden">наша страница instagramm</span></a>
+         </li>
+         <li class="socials-list__item socials-list__item_fb">
+            <a href="#"><span class="visually-hidden">наша страница facebook</span></a>
+         </li>
+      </ul>
+      <a class="link link-academy" href="https://htmlacademy.ru/intensive/adaptive">
+         <span>HTML Academy</span>
+         <div class="link-academy__img">
+            <img src="img/html-academy.svg" alt="логотип компании HTML Academy" width="27" height="34">
+         </div>
+      </a>
+   </div>
+</footer>
+
+   </div>
+</body>
+
+</html>
