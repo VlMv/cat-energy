@@ -9,13 +9,11 @@
    background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, var(--bg-hero-img) 65% top / auto 302px no-repeat;
    isolation: isolate;
 
-   @media (max-width: 1023px) {
+   @media (max-width: 499px) {
 
       @media (min-device-pixel-ratio: 2),
       (min-resolution: 2dppx) {
-         .hero {
-            --bg-hero-img: url("../img/background/cat-hero-mobile@2x.jpg");
-         }
+         --bg-hero-img: url("../img/background/cat-hero-mobile@2x.jpg");
       }
    }
 
