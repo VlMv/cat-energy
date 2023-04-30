@@ -23,7 +23,10 @@
                питание для котов</h2>
             <p class="hero__slogan">Занялся собой? Займись котом!</p>
             <picture>
-               <source media="(min-width: 768px)" srcset="@img/product-hero.png" width="552" height="499">
+               <source media="(min-width: 768px)" srcset="@img/product-hero.webp 1x, @img/product-hero@2x.webp 2x" width="552" height="499" type="image/webp">
+               <source media="(min-width: 768px)" srcset="@img/product-hero.png 1x, @img/product-hero@2x.png 2x" width="552" height="499" type="image/png">
+               <source srcset="@img/product-hero-mobile.webp 1x, @img/product-hero-mobile@2x.webp 2x" type="image/webp">
+               <source srcset="@img/product-hero-mobile.png 1x, @img/product-hero-mobile@2x.png 2x" type="image/png">
                <img class="hero__img" src="@img/product-hero-mobile.png" alt="корм cat energy в стакане-упаковке, вкус курица" width="280" height="270">
             </picture>
             <a class="link link_green-box link_big-font hero__link" href="form.html"><span>подобрать программу</span></a>

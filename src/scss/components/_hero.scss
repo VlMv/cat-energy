@@ -1,5 +1,5 @@
 .hero {
-   --bg-hero-img: url(@img/background/cat-hero-mobile.jpg);
+   --bg-hero-img: url("@img/background/cat-hero-mobile.jpg");
 
    display: flex;
    flex-direction: column;
@@ -9,13 +9,19 @@
    background: linear-gradient(var(--clr-green-transparent) 0 0) top / auto 302px no-repeat, var(--bg-hero-img) 65% top / auto 302px no-repeat;
    isolation: isolate;
 
-   @media (min-resolution: 2dppx) {
-      --bg-hero-img: url(@img/background/cat-hero-mobile@2x.jpg);
+   @media (max-width: 1023px) {
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 2dppx) {
+         .hero {
+            --bg-hero-img: url("../img/background/cat-hero-mobile@2x.jpg");
+         }
+      }
    }
 
    @include media-500 {
       margin-bottom: -57px;
-      background: transparent;
+      background: none;
    }
 
    @include media-768 {
@@ -24,12 +30,17 @@
    }
 
    @include media-1024 {
-      --bg-hero-img: url(@img/background/cat-hero-desktop.jpg);
+      --bg-hero-img: url("@img/background/cat-hero-desktop.jpg");
 
       position: relative;
       min-height: 576px;
       margin-bottom: 0;
       isolation: auto;
+
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 2dppx) {
+         --bg-hero-img: url("@img/background/cat-hero-desktop@2x.jpg");
+      }
 
       &::after {
          position: absolute;
@@ -41,10 +52,6 @@
          background: linear-gradient(var(--clr-green-transparent) 0 0) center no-repeat, var(--bg-hero-img) 0 center / auto 100% no-repeat;
          content: "";
       }
-   }
-
-   @media (min-resolution: 2dppx) and (min-width: 1024px) {
-      --bg-hero-img: url(@img/background/cat-hero-desktop@2x.jpg);
    }
 
    &__title {
