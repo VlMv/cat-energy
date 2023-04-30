@@ -52,7 +52,7 @@
    }
 
    &_slim {
-      --cat: url(@img/icons/icons.svg#slimm-cat-icon);
+      --cat: url("@img/icons/icons.svg#slimm-cat-icon");
       --width: 160px;
       --x: 88%;
 
@@ -62,7 +62,7 @@
    }
 
    &_muscle {
-      --cat: url(@img/icons/icons.svg#muscle-cat-icon);
+      --cat: url("@img/icons/icons.svg#muscle-cat-icon");
       --width: 215px;
       --x: 94%;
 
