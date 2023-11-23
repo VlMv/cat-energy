@@ -1,4 +1,4 @@
-# Cat energy, Pet-проект.
+# Cat energy, pet-проект.
 VIMv
 
 ---
