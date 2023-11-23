@@ -8,6 +8,7 @@ VIMv
 **Используемые технологии и подходы:**
 - SCSS
 - БЭМ
+- Pixel perfect
 - CSS custom properties
 - [Defensive CSS](https://ishadeed.com/article/defensive-css/) подход
 - CSS библиотека [Normalize](https://necolas.github.io/normalize.css/)
